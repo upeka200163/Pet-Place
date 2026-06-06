@@ -1,2 +1,2 @@
-# Pet-Place
-Developed a fully responsive Pet Store website from scratch using HTML, CSS, and JavaScript, focusing on modern web design, user experience, and cross-device compatibility.
+# Pet_Place_26-10-24
+Learn how to build a fully responsive pet store website from scratch using HTML, CSS, and JavaScript!
