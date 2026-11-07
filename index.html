@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Place 🐾 — Modern Pet Care & Veterinary Clinic</title>
+  <meta name="description"
+    content="Pet Place is your premier full-service pet care clinic and e-commerce store offering top-tier veterinary services, grooming, nutrition consultation, and premium pet supplies." />
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ==========================================================================
+       Welcome Landing Page & Gateway Portal
+       ========================================================================== -->
+  <div class="landing-page" id="landing-page">
+    <!-- Ambient Background Lighting -->
+    <div class="landing__glow landing__glow-1"></div>
+    <div class="landing__glow landing__glow-2"></div>
+    <div class="landing__glow landing__glow-3"></div>
+
+    <!-- Minimal Landing Top Navigation -->
+    <header class="landing__nav">
+      <div class="landing__nav-wrapper">
+        <div class="landing__brand">
+          <div class="landing__logo-badge">
+            <i class="ri-heart-pulse-fill"></i>
+            <span class="landing__logo-paw">🐾</span>
+          </div>
+          <div class="landing__logo-text">
+            <span class="landing__brand-title">Pet Place</span>
+            <span class="landing__brand-subtitle">VET CARE & CLINIC</span>
+          </div>
+        </div>
+
+        <nav class="landing__menu" aria-label="Landing Page Navigation">
+          <a href="#landing-features" class="landing__menu-link">Key Features</a>
+          <a href="#landing-ecosystem" class="landing__menu-link">Why Pet Place</a>
+          <a href="#landing-reviews" class="landing__menu-link">Stories</a>
+        </nav>
+
+        <div class="landing__nav-actions">
+          <button type="button" class="landing__theme-toggle" id="landing-theme-toggle" title="Toggle Theme"
+            aria-label="Toggle Theme">
+            <i class="ri-moon-line"></i>
+          </button>
+          <button type="button" class="landing__btn-nav btn-get-started" id="landing-get-started-nav">
+            <span>Get Started</span>
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Welcome Showcase -->
+    <section class="landing__hero">
+      <div class="landing__hero-container">
+        <div class="landing__hero-text">
+          <div class="landing__chip">
+            <span class="landing__chip-ping">
+              <span class="ping-core"></span>
+              <span class="ping-ring"></span>
+            </span>
+            <i class="ri-sparkling-fill"></i>
+            <span>Premier Pet Care & Veterinary Innovation</span>
+          </div>
+
+          <h1 class="landing__title">
+            Where Unconditional Love Meets
+            <span class="landing__gradient-text">World-Class Care.</span>
+          </h1>
+
+          <p class="landing__subtitle">
+            Welcome to Pet Place — your modern, all-in-one digital pet care portal. From 24/7 veterinary trauma support
+            and intelligent AI symptom triage to digital pet passports, precision health calculators, and curated
+            nutrition essentials.
+          </p>
+
+          <div class="landing__hero-actions">
+            <button type="button" class="landing__btn-primary btn-get-started" id="landing-hero-enter">
+              <span class="btn-shine"></span>
+              <i class="ri-rocket-2-fill"></i>
+              <span>Get Started — Enter Portal</span>
+              <i class="ri-arrow-right-line btn-arrow"></i>
+            </button>
+            <a href="#landing-features" class="landing__btn-outline">
+              <i class="ri-compass-3-line"></i>
+              <span>Explore Features</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </a>
+          </div>
+
+          <!-- Social Proof / Metrics Strip -->
+          <div class="landing__stats-strip">
+            <div class="landing__stat-box">
+              <h3>15,000+</h3>
+              <p>Happy Pets Treated</p>
+            </div>
+            <div class="landing__stat-sep"></div>
+            <div class="landing__stat-box">
+              <h3>24/7</h3>
+              <p>ER Trauma Ready</p>
+            </div>
+            <div class="landing__stat-sep"></div>
+            <div class="landing__stat-box">
+              <h3>4.9 ★</h3>
+              <p>Client Trust Score</p>
+            </div>
+            <div class="landing__stat-sep"></div>
+            <div class="landing__stat-box">
+              <h3>100%</h3>
+              <p>Vet-Certified Care</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Composition with Floating Cards -->
+        <div class="landing__hero-media">
+          <div class="landing__media-wrap">
+            <div class="landing__media-glow"></div>
+            <img src="assets/landing-dog.jpg" alt="Radiant Golden Retriever in modern veterinary wellness clinic"
+              class="landing__hero-img" />
+
+            <!-- Floating Card 1: 24/7 ER Hotline -->
+            <div class="landing__float-card float-card-er">
+              <div class="float-card__icon er-icon">
+                <i class="ri-alarm-warning-fill"></i>
+              </div>
+              <div class="float-card__text">
+                <span class="float-label">24/7 Trauma Care</span>
+                <strong>Zero-Wait ER Hotline</strong>
+              </div>
+              <span class="live-dot"></span>
+            </div>
+
+            <!-- Floating Card 2: AI PawBot -->
+            <div class="landing__float-card float-card-ai">
+              <div class="float-card__icon ai-icon">
+                <i class="ri-robot-2-fill"></i>
+              </div>
+              <div class="float-card__text">
+                <span class="float-label">PawBot™ Live</span>
+                <strong>AI Symptom Checker</strong>
+              </div>
+            </div>
+
+            <!-- Floating Card 3: Digital Passport -->
+            <div class="landing__float-card float-card-pass">
+              <div class="float-card__icon pass-icon">
+                <i class="ri-shield-check-fill"></i>
+              </div>
+              <div class="float-card__text">
+                <span class="float-label">Digital Passport</span>
+                <strong>Cloud Health Vault</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Main Feature Highlights Showcase Grid -->
+    <section class="landing__features" id="landing-features">
+      <div class="landing__container">
+        <div class="landing__section-title-wrap">
+          <span class="landing__section-badge">
+            <i class="ri-apps-2-line"></i> Core Platform Modules
+          </span>
+          <h2 class="landing__section-heading">Everything You Need To Keep Your Pets Thriving</h2>
+          <p class="landing__section-sub">
+            Pet Place unites emergency medical trauma care, AI diagnostics, health tracking vaults, and certified
+            commerce into a unified, seamless portal.
+          </p>
+        </div>
+
+        <div class="landing__feature-grid">
+          <!-- Card 1: 24/7 Clinical Care -->
+          <div class="landing__feature-item" data-target="#services">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-vet">
+                <i class="ri-stethoscope-fill"></i>
+              </div>
+              <span class="landing__tag tag-red">24/7 Trauma Care</span>
+            </div>
+            <h3>Full-Service Veterinary Hospital</h3>
+            <p>
+              Board-certified surgeons, advanced digital radiography, intensive care unit (ICU), and round-the-clock
+              emergency support for critical moments.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> Emergency Trauma & Diagnostics</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Routine Wellness & Vaccinations</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Dental Surgery & Ultrasonography</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#services">
+              <span>Explore Services</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 2: AI Symptom Checker -->
+          <div class="landing__feature-item" data-target="#triage">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-ai">
+                <i class="ri-robot-2-fill"></i>
+              </div>
+              <span class="landing__tag tag-purple">Smart AI Triage</span>
+            </div>
+            <h3>PawBot™ Symptom Checker</h3>
+            <p>
+              Interactive clinical triage algorithm evaluating pet symptoms in real-time to compute urgency levels and
+              guide parents with safe emergency steps.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> Red-Flag Emergency Detection</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Multi-Species Diagnostic Engine</li>
+              <li><i class="ri-checkbox-circle-fill"></i> 24/7 Interactive Live Guidance</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#triage">
+              <span>Launch Triage Tool</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 3: Digital Pet Passport -->
+          <div class="landing__feature-item" data-target="#passport">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-pass">
+                <i class="ri-profile-fill"></i>
+              </div>
+              <span class="landing__tag tag-blue">Cloud Health Vault</span>
+            </div>
+            <h3>Digital Pet Passport & Records</h3>
+            <p>
+              Store your pet's complete medical history, vaccination booster reminders, microchip registry, weight
+              velocity charts, and travel certificates.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> Centralized Microchip & Rabies Log</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Visual Growth & Weight Tracker</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Instant Health Certificate Export</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#passport">
+              <span>View Pet Passport</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 4: Curated Pet Essentials Store -->
+          <div class="landing__feature-item" data-target="#store">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-store">
+                <i class="ri-shopping-basket-fill"></i>
+              </div>
+              <span class="landing__tag tag-green">Curated Boutique</span>
+            </div>
+            <h3>Premium Essentials & Nutrition</h3>
+            <p>
+              Shop veterinarian-approved grain-free kibble, organic freeze-dried treats, soft probiotic chews, and
+              ergonomic harness gear with multi-currency switch.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> 100% Tested Non-Toxic & Organic</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Multi-Currency (USD, EUR, GBP, LKR)</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Live Real-Time Package Tracking</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#store">
+              <span>Shop Pet Store</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 5: Smart Calorie & Age Calculator -->
+          <div class="landing__feature-item" data-target="#calculator">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-calc">
+                <i class="ri-calculator-fill"></i>
+              </div>
+              <span class="landing__tag tag-amber">Smart Care Tool</span>
+            </div>
+            <h3>Pet Age & Calorie Calculator</h3>
+            <p>
+              Calculate your pet's exact daily resting & maintenance energy requirements (RER / MER), optimal daily
+              hydration milliliters, and equivalent human age.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> Weight & Activity-Specific Calories</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Daily Water Intake Estimator</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Biological Human-Age Scale</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#calculator">
+              <span>Use Calculator</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 6: Online Booking Wizard -->
+          <div class="landing__feature-item" data-target="#appointment">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-booking">
+                <i class="ri-calendar-check-fill"></i>
+              </div>
+              <span class="landing__tag tag-teal">Instant Scheduling</span>
+            </div>
+            <h3>Online Appointment Scheduling</h3>
+            <p>
+              Book clinic visits, surgical consultations, or grooming sessions in seconds. Select your preferred
+              veterinarian specialist and time slot online.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> 2-Minute Guided Booking Wizard</li>
+              <li><i class="ri-checkbox-circle-fill"></i> SMS & Calendar Reminders</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Free Rescheduling & Support</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#appointment">
+              <span>Book Appointment</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 7: TeleVet 24/7 Virtual Consultation -->
+          <div class="landing__feature-item" data-target="#televet-section">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-vet" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                <i class="ri-video-chat-fill"></i>
+              </div>
+              <span class="landing__tag tag-green">Virtual Clinic</span>
+            </div>
+            <h3>TeleVet Video Consultations</h3>
+            <p>
+              Connect face-to-face with licensed veterinary surgeons via secure video call. Receive professional medical
+              advice and digital e-prescriptions from home.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> Instant HD Video & Live Chat</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Official Electronic Prescriptions</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Stress-Free At-Home Checkups</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#televet-section">
+              <span>Connect to TeleVet</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+
+          <!-- Card 8: PawAlert Lost & Found Community -->
+          <div class="landing__feature-item" data-target="#lost-found">
+            <div class="landing__feature-top">
+              <div class="landing__feature-icon icon-ai" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
+                <i class="ri-alarm-warning-fill"></i>
+              </div>
+              <span class="landing__tag tag-red">Safety Network</span>
+            </div>
+            <h3>PawAlert Lost & Found Network</h3>
+            <p>
+              Community bulletin helping reunite lost pets with families. Search active alerts, report stray sightings,
+              or generate printable missing flyers instantly.
+            </p>
+            <ul class="landing__feature-perks">
+              <li><i class="ri-checkbox-circle-fill"></i> Real-time Community Alert Grid</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Instant High-Contrast Poster Generator</li>
+              <li><i class="ri-checkbox-circle-fill"></i> Scannable Microchip QR Codes</li>
+            </ul>
+            <button type="button" class="landing__feature-btn btn-feature-enter" data-target="#lost-found">
+              <span>View PawAlert Bulletin</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Why Pet Parents Choose Us / 3-Step Journey -->
+    <section class="landing__journey" id="landing-ecosystem">
+      <div class="landing__container">
+        <div class="landing__section-title-wrap">
+          <span class="landing__section-badge">
+            <i class="ri-route-line"></i> The Pet Place Standard
+          </span>
+          <h2 class="landing__section-heading">How We Elevate Your Pet Parenting Experience</h2>
+          <p class="landing__section-sub">
+            Designed for modern pet parents who want rapid access, verified medical expertise, and seamless digital
+            tools.
+          </p>
+        </div>
+
+        <div class="landing__steps-wrap">
+          <div class="landing__step-card">
+            <div class="landing__step-badge">01</div>
+            <div class="landing__step-icon-wrap"><i class="ri-user-heart-fill"></i></div>
+            <h4>Instant Access</h4>
+            <p>Click "Get Started" to enter the full portal. Zero login barriers to start browsing products, health
+              tools, and booking.</p>
+          </div>
+
+          <div class="landing__step-card">
+            <div class="landing__step-badge">02</div>
+            <div class="landing__step-icon-wrap"><i class="ri-pulse-fill"></i></div>
+            <h4>Proactive Wellness</h4>
+            <p>Check symptoms with PawBot™, manage your pet's cloud passport, calculate nutrition needs, and reserve
+              appointments.</p>
+          </div>
+
+          <div class="landing__step-card">
+            <div class="landing__step-badge">03</div>
+            <div class="landing__step-icon-wrap"><i class="ri-truck-fill"></i></div>
+            <h4>Doorstep Care</h4>
+            <p>Receive clinic-grade nutrition and prescriptions at your doorstep with live milestone package tracking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Community Social Proof Preview -->
+    <section class="landing__reviews" id="landing-reviews">
+      <div class="landing__container">
+        <div class="landing__review-card">
+          <div class="landing__stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <blockquote>
+            "Pet Place has completely changed the way we handle our dog Milo's veterinary care. Having our pet passport,
+            symptom checker, online booking, and premium food in one smooth portal gives us unmatched peace of mind!"
+          </blockquote>
+          <div class="landing__author">
+            <img src="assets/client-1.jpg" alt="Pet Parent Sarah Jenkins" class="landing__author-img" />
+            <div>
+              <strong>Sarah Jenkins & Milo</strong>
+              <small>Golden Retriever Parent • Verified Community Member</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Grand Final Welcome Call To Action -->
+    <section class="landing__cta-wrap">
+      <div class="landing__container">
+        <div class="landing__cta-banner">
+          <div class="landing__cta-glow"></div>
+          <span class="landing__cta-chip">
+            <i class="ri-sparkling-fill"></i> Ready To Experience The Next Level of Pet Care?
+          </span>
+          <h2 class="landing__cta-title">
+            Enter Pet Place Today. Your Companion Deserves The Best.
+          </h2>
+          <p class="landing__cta-desc">
+            Explore our clinical hospital, interactive triage tools, digital passport dashboard, and curated boutique
+            right away.
+          </p>
+
+          <div class="landing__cta-btns">
+            <button type="button" class="landing__btn-cta-lg btn-get-started" id="landing-cta-enter">
+              <span class="btn-shine"></span>
+              <i class="ri-rocket-2-fill"></i>
+              <span>Get Started — Enter Main Application</span>
+              <i class="ri-arrow-right-line btn-arrow"></i>
+            </button>
+          </div>
+
+          <div class="landing__cta-features">
+            <span><i class="ri-checkbox-circle-fill"></i> Instant Access</span>
+            <span><i class="ri-checkbox-circle-fill"></i> 24/7 ER Trauma Support</span>
+            <span><i class="ri-checkbox-circle-fill"></i> Free Digital Health Tools</span>
+            <span><i class="ri-checkbox-circle-fill"></i> Fully Responsive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Minimal Landing Footer -->
+    <footer class="landing__footer">
+      <div class="landing__container landing__footer-flex">
+        <div class="landing__footer-brand">
+          <strong>Pet Place 🐾</strong>
+          <small>© 2026 Pet Place Full-Service Veterinary Hospital & Store. All rights reserved.</small>
+        </div>
+        <button type="button" class="landing__footer-btn btn-get-started">
+          <span>Enter Portal</span>
+          <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </footer>
+  </div><!-- /#landing-page -->
+
+  <!-- ==========================================================================
+       Main Application Container
+       ========================================================================== -->
+  <div class="main-app" id="main-app">
+    <!-- Top Announcement & Hotline Bar -->
+    <div class="announcement__bar" id="announcement-bar">
+      <div class="announcement__content">
+        <!-- Left: Live Emergency Hotline -->
+        <div class="announcement__left">
+          <div class="announcement__emergency-chip">
+            <span class="emergency-beacon">
+              <span class="beacon-core"></span>
+              <span class="beacon-ring"></span>
+            </span>
+            <span class="emergency-label">24/7 Pet Emergency Line:</span>
+          </div>
+          <a href="tel:+94708765432" class="announcement__phone-pill" title="Call Emergency Veterinarian">
+            <i class="ri-phone-fill"></i>
+            <span>+94 70 876 5432</span>
+          </a>
+        </div>
+
+        <!-- Center / Right: Offer & Quick Booking -->
+        <div class="announcement__right">
+          <div class="announcement__promo-chip">
+            <span class="promo-badge"><i class="ri-sparkling-fill"></i> 10% OFF</span>
+            <span class="promo-text">Use coupon</span>
+            <button type="button" class="promo-copy-btn" id="copy-promo-top" title="Click to copy promo code">
+              <code>PET10</code>
+              <i class="ri-file-copy-line"></i>
+            </button>
+          </div>
+
+          <span class="announcement__divider"></span>
+
+          <div class="announcement__actions">
+            <a href="#appointment" class="announcement__booking-btn open-booking-btn">
+              <i class="ri-calendar-check-line"></i>
+              <span>Book Online</span>
+              <i class="ri-arrow-right-s-line arrow-icon"></i>
+            </a>
+            <button class="announcement__close" id="close-announcement" aria-label="Close Announcement"
+              title="Dismiss banner">
+              <i class="ri-close-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+      <div class="nav__wrapper">
+        <div class="nav__logo">
+          <a href="#home">
+            Pet Place<span>🐾</span>
+          </a>
+        </div>
+
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#calculator">Pet Wellness</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <!-- Theme Toggle (Dark / Light) -->
+          <button class="nav__action-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Dark Mode">
+            <i class="ri-moon-line"></i>
+          </button>
+
+          <!-- Wishlist Button -->
+          <button class="nav__action-btn" id="wishlist-btn" title="View Wishlist" aria-label="View Wishlist">
+            <i class="ri-heart-3-line"></i>
+            <span class="nav__action-badge" id="wishlist-count">0</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button class="nav__action-btn" id="cart-btn" title="Shopping Cart" aria-label="View Cart">
+            <i class="ri-shopping-bag-3-line"></i>
+            <span class="nav__action-badge" id="cart-count">0</span>
+          </button>
+
+          <!-- Delivery Button -->
+          <button class="nav__action-btn" id="nav-track-btn" title="Track Live Delivery" aria-label="Track Delivery">
+            <i class="ri-truck-line"></i>
+          </button>
+
+          <!-- Back to Landing Page Button -->
+          <button class="nav__action-btn" id="btn-return-landing" title="Back to Landing Page"
+            aria-label="Back to Landing Page">
+            <i class="ri-compass-3-line"></i>
+          </button>
+
+          <!-- Book Appointment CTA -->
+          <button class="nav__cta-btn open-booking-btn" id="nav-book-btn">
+            <i class="ri-calendar-2-line"></i> Book Visit
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <div class="nav__menu__btn" id="menu-btn" aria-label="Toggle Menu">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="home">
+      <div class="section__container header__container">
+        <div class="header__content">
+          <div class="header__badge">
+            <i class="ri-star-fill"></i> ★ 4.9/5 Rating (2,500+ Pet Parents)
+          </div>
+          <h1>Care Your <span>Pet</span><br />Deserves</h1>
+          <h2>Trusted Veterinary Medicine & Premium Pet Essentials</h2>
+          <p>
+            From routine wellness check-ups and emergency trauma care to specialized nutrition
+            and organic grooming — we treat every furry friend like cherished family.
+          </p>
+          <div class="header__actions">
+            <div class="header__btn">
+              <button class="open-booking-btn">
+                Book an Appointment
+                <span><i class="ri-arrow-right-line"></i></span>
+              </button>
+            </div>
+            <a href="#store" class="btn__secondary">
+              <i class="ri-shopping-cart-2-line"></i> Explore Store
+            </a>
+          </div>
+        </div>
+
+        <div class="header__image">
+          <img src="assets/header-bg.png" alt="header background graphic" class="header__image-bg" />
+          <img src="assets/header.png" alt="Happy pet with caring veterinarian" class="main-hero-img" />
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top-left">
+            <div class="badge-icon">
+              <i class="ri-shield-check-fill"></i>
+            </div>
+            <div>
+              <h5>Certified Clinic</h5>
+              <p>Top Rated in 2026</p>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <div class="badge-icon">
+              <i class="ri-stethoscope-fill"></i>
+            </div>
+            <div>
+              <h5>24/7 Support</h5>
+              <p>Emergency Ready</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Trust & Stats Counter Banner -->
+    <section class="stats__section">
+      <div class="stats__container">
+        <div class="stat__box">
+          <div class="stat__icon">
+            <i class="ri-heart-pulse-fill"></i>
+          </div>
+          <div class="stat__info">
+            <h3>15k+</h3>
+            <p>Happy Pets Treated</p>
+          </div>
+        </div>
+        <div class="stat__box">
+          <div class="stat__icon">
+            <i class="ri-user-star-fill"></i>
+          </div>
+          <div class="stat__info">
+            <h3>25+</h3>
+            <p>Expert Doctors & Staff</p>
+          </div>
+        </div>
+        <div class="stat__box">
+          <div class="stat__icon">
+            <i class="ri-award-fill"></i>
+          </div>
+          <div class="stat__info">
+            <h3>99.8%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+        <div class="stat__box">
+          <div class="stat__icon">
+            <i class="ri-time-fill"></i>
+          </div>
+          <div class="stat__info">
+            <h3>24/7</h3>
+            <p>Emergency Care</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Intro Cards Section -->
+    <section class="section__container intro__container">
+      <p class="section__subheader">Why Choose Us</p>
+      <h2 class="section__header">Get to know Pet Place</h2>
+      <p class="section__desc">
+        We provide exceptional medical standards combined with loving, gentle care to ensure
+        your pets live vibrant, joyful, and healthy lives.
+      </p>
+      <div class="intro__grid">
+        <div class="intro__card">
+          <div class="intro__image">
+            <img src="assets/intro-1.png" alt="Pet Experts" />
+          </div>
+          <h4>Pet Experts</h4>
+          <p>
+            Meet our certified team of veterinarians, specialists, and compassionate veterinary technicians.
+          </p>
+          <a href="#about" class="btn-card">Read More</a>
+        </div>
+        <div class="intro__card">
+          <div class="intro__image">
+            <img src="assets/intro-2.png" alt="Vet Services" />
+          </div>
+          <h4>Vet Services</h4>
+          <p>
+            Comprehensive preventive screenings, dentistry, advanced surgery, and emergency triage.
+          </p>
+          <a href="#service" class="btn-card">Explore Services</a>
+        </div>
+        <div class="intro__card">
+          <div class="intro__image">
+            <img src="assets/intro-3.png" alt="Contact Us" />
+          </div>
+          <h4>Contact Us</h4>
+          <p>
+            Have a question or need to schedule an urgent appointment? Reach out to us around the clock.
+          </p>
+          <a href="#contact" class="btn-card">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section class="section__container about__container" id="about">
+      <p class="section__subheader">About Us</p>
+      <h2 class="section__header">What we can do for you</h2>
+      <p class="section__desc">
+        Dedicated to preventative health, compassionate treatment, and stress-free clinic experiences.
+      </p>
+
+      <div class="about__row">
+        <div class="about__image">
+          <img src="assets/about-1.jpg" alt="Veterinary health examination" />
+        </div>
+        <div class="about__content">
+          <span><img src="assets/about-1-icon.png" alt="about-icon" /></span>
+          <h4>Let us help you with your pet's health</h4>
+          <p>
+            Our dedicated veterinarians provide holistic preventative screenings, vaccinations,
+            and individualized treatment regimens to ensure lifelong vitality for dogs, cats, and small animals.
+          </p>
+          <div class="about__perks">
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Advanced digital diagnostics & in-house lab
+            </div>
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Customized preventive wellness programs
+            </div>
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Fear-Free certified gentle patient handling
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__row">
+        <div class="about__image">
+          <img src="assets/about-2.jpg" alt="Caring pet staff" />
+        </div>
+        <div class="about__content">
+          <span><img src="assets/about-2-icon.png" alt="about-icon" /></span>
+          <h4>Caring personnel will take care of your pet</h4>
+          <p>
+            Your pet is family. Whether visiting for a routine check-up, recovery after minor surgery,
+            or an extended boarding stay, our attentive staff ensures comfort, warmth, and round-the-clock attention.
+          </p>
+          <div class="about__perks">
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> 24/7 continuous patient monitoring
+            </div>
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Climate-controlled recovery suites
+            </div>
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Daily video & photo updates for owners
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__row">
+        <div class="about__image">
+          <img src="assets/about-3.jpg" alt="Professional pet grooming" />
+        </div>
+        <div class="about__content">
+          <span><img src="assets/about-3-icon.png" alt="about-icon" /></span>
+          <h4>Let us groom your precious and loved pet</h4>
+          <p>
+            From luxurious hydrotherapy baths to breed-specific styling, ear cleaning, and gentle nail trims,
+            our certified groomers pamper your companion with natural, hypoallergenic products.
+          </p>
+          <div class="about__perks">
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Organic, hypoallergenic shampoos & conditioners
+            </div>
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> De-shedding and gentle coat detangling
+            </div>
+            <div class="about__perk-item">
+              <i class="ri-checkbox-circle-fill"></i> Relaxing spa environment for anxious pets
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="section__container service__container" id="service">
+      <p class="section__subheader">Our Veterinary Services</p>
+      <h2 class="section__header">Comprehensive Care for Every Stage</h2>
+      <p class="section__desc">
+        Equipped with modern medical facilities, our team offers tailored clinical care,
+        routine wellness, and emergency intervention.
+      </p>
+
+      <div class="service__grid">
+        <!-- Service 1 -->
+        <div class="service__card-modern">
+          <div class="service__icon-wrap" style="background-color: #ffe5ec;">
+            <img src="assets/service-1.png" alt="Emergency Care" />
+          </div>
+          <h4>Emergency & Trauma Care</h4>
+          <p>Immediate 24/7 critical care, trauma intervention, oxygen therapy, and emergency surgery.</p>
+          <ul class="service__features">
+            <li><i class="ri-check-line"></i> In-house trauma unit</li>
+            <li><i class="ri-check-line"></i> Real-time vital signs monitoring</li>
+            <li><i class="ri-check-line"></i> Rapid ultrasound & X-ray</li>
+          </ul>
+          <div class="service__footer">
+            <span class="service__price" data-base-price="85.00" data-suffix="">From $85.00</span>
+            <button class="btn-book-service" data-service="Emergency Care">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service__card-modern">
+          <div class="service__icon-wrap" style="background-color: #e3f2fd;">
+            <img src="assets/service-2.png" alt="Vaccination Services" />
+          </div>
+          <h4>Vaccination & Microchipping</h4>
+          <p>Complete core immunization protocols, rabies prevention, and ISO-compliant microchip implants.</p>
+          <ul class="service__features">
+            <li><i class="ri-check-line"></i> Full rabies & core vaccines</li>
+            <li><i class="ri-check-line"></i> Lifetime microchip registry</li>
+            <li><i class="ri-check-line"></i> Official digital pet health passport</li>
+          </ul>
+          <div class="service__footer">
+            <span class="service__price" data-base-price="45.00" data-suffix="">From $45.00</span>
+            <button class="btn-book-service" data-service="Vaccination Services">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service__card-modern">
+          <div class="service__icon-wrap" style="background-color: #e8f5e9;">
+            <img src="assets/service-3.png" alt="Nutrition Counseling" />
+          </div>
+          <h4>Nutrition & Diet Plans</h4>
+          <p>Scientific diet counseling for weight management, food allergies, renal support, and puppy growth.</p>
+          <ul class="service__features">
+            <li><i class="ri-check-line"></i> Tailored calorie calculations</li>
+            <li><i class="ri-check-line"></i> Allergy testing & eliminations</li>
+            <li><i class="ri-check-line"></i> Senior pet joint mobility diets</li>
+          </ul>
+          <div class="service__footer">
+            <span class="service__price" data-base-price="40.00" data-suffix="">From $40.00</span>
+            <button class="btn-book-service" data-service="Nutrition Counseling">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service__card-modern">
+          <div class="service__icon-wrap" style="background-color: #fff3e0;">
+            <img src="assets/service-4.png" alt="Behavioral Consultation" />
+          </div>
+          <h4>Behavioral Consultation</h4>
+          <p>Positive reinforcement methods to help manage separation anxiety, leash reactivity, and phobias.</p>
+          <ul class="service__features">
+            <li><i class="ri-check-line"></i> One-on-one specialist session</li>
+            <li><i class="ri-check-line"></i> Habit modification strategy</li>
+            <li><i class="ri-check-line"></i> Home adaptation recommendations</li>
+          </ul>
+          <div class="service__footer">
+            <span class="service__price" data-base-price="55.00" data-suffix="">From $55.00</span>
+            <button class="btn-book-service" data-service="Behavioral Consultation">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service__card-modern">
+          <div class="service__icon-wrap" style="background-color: #ede7f6;">
+            <img src="assets/service-5.png" alt="Pet Boarding Services" />
+          </div>
+          <h4>Pet Boarding & Daycare</h4>
+          <p>Safe, hygienic, climate-controlled boarding suites with outdoor playtime and daily medical checkups.</p>
+          <ul class="service__features">
+            <li><i class="ri-check-line"></i> Individual cozy suites</li>
+            <li><i class="ri-check-line"></i> Supervised socialization yards</li>
+            <li><i class="ri-check-line"></i> Daily photo/video updates</li>
+          </ul>
+          <div class="service__footer">
+            <span class="service__price" data-base-price="35.00" data-suffix="/day">From $35.00/day</span>
+            <button class="btn-book-service" data-service="Pet Boarding Services">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service__card-modern">
+          <div class="service__icon-wrap" style="background-color: #fce4ec;">
+            <i class="ri-sparkling-fill" style="font-size: 2.2rem; color: #f72585;"></i>
+          </div>
+          <h4>Grooming & Ultrasonic Dental</h4>
+          <p>Complete spa treatments, coat styling, de-matting, and non-anesthetic ultrasonic dental tartar removal.</p>
+          <ul class="service__features">
+            <li><i class="ri-check-line"></i> Hypoallergenic botanical wash</li>
+            <li><i class="ri-check-line"></i> Gentle ultrasonic tartar scaling</li>
+            <li><i class="ri-check-line"></i> Ear cleaning & paw balm therapy</li>
+          </ul>
+          <div class="service__footer">
+            <span class="service__price" data-base-price="60.00" data-suffix="">From $60.00</span>
+            <button class="btn-book-service" data-service="Grooming & Dental">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TeleVet 24/7 Virtual Consultation Clinic Suite
+         ========================================================================== -->
+    <section class="section__container televet__section" id="televet-section">
+      <div class="televet__banner-box">
+        <div class="televet__content">
+          <div class="televet__badge">
+            <span class="live-dot"></span>
+            <span>24/7 TeleVet Video Clinic</span>
+          </div>
+          <h2 class="section__header" style="text-align: left; margin-bottom: 0.8rem;">
+            Face-to-Face Virtual Vet Care From Home
+          </h2>
+          <p class="section__desc" style="text-align: left; margin: 0 0 1.5rem 0;">
+            Worried about mild symptoms, behavior changes, diet questions, or post-surgery healing?
+            Connect directly with licensed veterinarians via secure HD video consultation with real-time digital
+            prescriptions.
+          </p>
+
+          <div class="televet__doctors-grid">
+            <!-- Doctor 1 -->
+            <div class="televet__doc-card active" data-doc="Dr. Maya Senanayake"
+              data-spec="Chief Surgeon & Small Animal Medicine" data-rating="4.9 ★ (380 visits)"
+              data-avatar="assets/client-1.jpg">
+              <div class="doc-avatar-wrap">
+                <img src="assets/client-1.jpg" alt="Dr. Maya Senanayake" />
+                <span class="doc-status-indicator online" title="Available Now"></span>
+              </div>
+              <div class="doc-info">
+                <h4>Dr. Maya Senanayake</h4>
+                <p>Chief Surgeon (12 yrs exp)</p>
+                <div class="doc-rating"><i class="ri-star-fill"></i> 4.9 (380+ visits)</div>
+              </div>
+              <span class="doc-select-indicator"><i class="ri-check-line"></i></span>
+            </div>
+
+            <!-- Doctor 2 -->
+            <div class="televet__doc-card" data-doc="Dr. Kasun Perera" data-spec="Feline Specialist & Nutritionist"
+              data-rating="4.9 ★ (290 visits)" data-avatar="assets/client-2.jpg">
+              <div class="doc-avatar-wrap">
+                <img src="assets/client-2.jpg" alt="Dr. Kasun Perera" />
+                <span class="doc-status-indicator online" title="Available Now"></span>
+              </div>
+              <div class="doc-info">
+                <h4>Dr. Kasun Perera</h4>
+                <p>Feline Specialist (9 yrs exp)</p>
+                <div class="doc-rating"><i class="ri-star-fill"></i> 4.9 (290+ visits)</div>
+              </div>
+              <span class="doc-select-indicator"><i class="ri-check-line"></i></span>
+            </div>
+
+            <!-- Doctor 3 -->
+            <div class="televet__doc-card" data-doc="Dr. Rachel Davies" data-spec="Emergency Trauma & Exotic Pets"
+              data-rating="4.8 ★ (210 visits)" data-avatar="assets/client-3.jpg">
+              <div class="doc-avatar-wrap">
+                <img src="assets/client-3.jpg" alt="Dr. Rachel Davies" />
+                <span class="doc-status-indicator online" title="Available Now"></span>
+              </div>
+              <div class="doc-info">
+                <h4>Dr. Rachel Davies</h4>
+                <p>Exotic & Trauma (7 yrs exp)</p>
+                <div class="doc-rating"><i class="ri-star-fill"></i> 4.8 (210+ visits)</div>
+              </div>
+              <span class="doc-select-indicator"><i class="ri-check-line"></i></span>
+            </div>
+          </div>
+
+          <div class="televet__actions">
+            <button type="button" class="btn__primary btn-start-televet" id="btn-start-televet">
+              <i class="ri-video-chat-fill"></i> Connect to Virtual Clinic Now
+            </button>
+            <div class="televet__features-mini">
+              <span><i class="ri-shield-check-fill"></i> HIPAA / Vet-Encrypted</span>
+              <span><i class="ri-file-text-fill"></i> Instant Digital Rx</span>
+              <span><i class="ri-time-fill"></i> Zero Waiting Room</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="televet__preview-media">
+          <div class="televet__screen-frame">
+            <div class="televet__screen-header">
+              <span class="screen-dot red"></span>
+              <span class="screen-dot yellow"></span>
+              <span class="screen-dot green"></span>
+              <span class="screen-title"><i class="ri-video-line"></i> PetPlace Live TeleVet Room #842</span>
+            </div>
+            <div class="televet__screen-body">
+              <img src="assets/about-1.jpg" alt="Live veterinary video consultation" class="televet-stream-img" />
+              <div class="televet__call-overlay">
+                <span class="call-rec-badge"><span class="rec-dot"></span> LIVE HD CALL</span>
+                <span class="call-doctor-name"><i class="ri-stethoscope-fill"></i> Dr. Maya Senanayake, BVSc</span>
+              </div>
+              <div class="televet__pip-preview">
+                <img src="assets/client-5.jpg" alt="Pet Parent" />
+                <span>You & Milo 🐾</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Pet Symptom Checker & Emergency Triage Tool
+         ========================================================================== -->
+    <section class="section__container triage__section" id="triage">
+      <p class="section__subheader">Clinical Triage Assistant</p>
+      <h2 class="section__header">Pet Symptom Checker & Emergency Triage</h2>
+      <p class="section__desc">
+        Worried about your pet's symptoms? Select what your dog or cat is experiencing for an immediate,
+        veterinarian-developed assessment and clear action guidance.
+      </p>
+
+      <div class="triage__container">
+        <!-- Form Controls Panel -->
+        <div class="triage__card" id="triage-card">
+          <!-- Step 1: Species Switcher -->
+          <div class="triage__step">
+            <label class="triage__step-title">
+              <span class="step-badge">1</span> Select Pet Species:
+            </label>
+            <div class="triage__species-toggle">
+              <button type="button" class="species-btn active" data-species="dog">
+                <span class="species-emoji">🐕</span>
+                <div>
+                  <strong>Dog / Canine</strong>
+                  <small>Puppy or adult dog</small>
+                </div>
+              </button>
+              <button type="button" class="species-btn" data-species="cat">
+                <span class="species-emoji">🐈</span>
+                <div>
+                  <strong>Cat / Feline</strong>
+                  <small>Kitten or adult cat</small>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Category Selection -->
+          <div class="triage__step">
+            <label class="triage__step-title">
+              <span class="step-badge">2</span> What area is affected?
+            </label>
+            <div class="triage__categories" id="triage-categories">
+              <button type="button" class="triage-cat-btn active" data-cat="digestive">
+                <i class="ri-restaurant-line"></i>
+                <span>Stomach & Digestion</span>
+              </button>
+              <button type="button" class="triage-cat-btn" data-cat="breathing">
+                <i class="ri-lungs-line"></i>
+                <span>Breathing & Chest</span>
+              </button>
+              <button type="button" class="triage-cat-btn" data-cat="energy">
+                <i class="ri-pulse-line"></i>
+                <span>Energy & Behavior</span>
+              </button>
+              <button type="button" class="triage-cat-btn" data-cat="mobility">
+                <i class="ri-walk-line"></i>
+                <span>Paws & Mobility</span>
+              </button>
+              <button type="button" class="triage-cat-btn" data-cat="skin_eyes">
+                <i class="ri-eye-line"></i>
+                <span>Skin, Eyes & Ears</span>
+              </button>
+              <button type="button" class="triage-cat-btn" data-cat="toxins">
+                <i class="ri-alarm-warning-line"></i>
+                <span>Toxins & Ingestion</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Specific Symptom Selection (Dynamically Populated) -->
+          <div class="triage__step">
+            <label class="triage__step-title">
+              <span class="step-badge">3</span> Select the most matching symptom:
+            </label>
+            <div class="triage__symptom-list" id="triage-symptom-list">
+              <!-- Rendered via JavaScript -->
+            </div>
+          </div>
+
+          <!-- Step 4: Additional Context -->
+          <div class="triage__step">
+            <label class="triage__step-title">
+              <span class="step-badge">4</span> Timeline & Activity:
+            </label>
+            <div class="triage__context-grid">
+              <div class="context-group">
+                <label for="triage-duration">How long has this been happening?</label>
+                <select id="triage-duration">
+                  <option value="recent">Just started (&lt; 2 hours)</option>
+                  <option value="today" selected>Earlier today (2 - 12 hours)</option>
+                  <option value="days">1 - 2 days</option>
+                  <option value="prolonged">3+ days</option>
+                </select>
+              </div>
+              <div class="context-group">
+                <label for="triage-alertness">Pet's Current Energy Level:</label>
+                <select id="triage-alertness">
+                  <option value="normal" selected>Normal / slightly subdued</option>
+                  <option value="lethargic">Very lethargic & weak</option>
+                  <option value="collapsed">Collapsed / unresponsive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn__primary btn-analyze-triage" id="btn-analyze-triage"
+            style="width: 100%; justify-content: center;">
+            <i class="ri-heart-pulse-fill"></i> Evaluate Symptoms & Get Guidance
+          </button>
+        </div>
+
+        <!-- Triage Result Card (Dynamic Output) -->
+        <div class="triage__result-wrapper" id="triage-result-wrapper" style="display: none;">
+          <div class="triage__result-card" id="triage-result-card">
+            <!-- Dynamic assessment content injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Digital Pet Passport & Pet Health Vault Dashboard
+         ========================================================================== -->
+    <section class="section__container passport__section" id="passport">
+      <p class="section__subheader">Biometric Pet Health Vault</p>
+      <h2 class="section__header">Digital Pet Passport & Health Records</h2>
+      <p class="section__desc">
+        Access your pet's ISO microchip record, core vaccination schedule, weight history, and verified health
+        certificate from any device.
+      </p>
+
+      <!-- Pet Switcher & Quick Controls -->
+      <div class="passport__top-bar">
+        <div class="passport__pet-selector" id="passport-pet-selector">
+          <button type="button" class="pet-select-chip active" data-pet-id="pet-milo">
+            <span class="chip-avatar">🐕</span>
+            <div>
+              <strong>Milo</strong>
+              <small>Golden Retriever (3 yrs)</small>
+            </div>
+          </button>
+          <button type="button" class="pet-select-chip" data-pet-id="pet-luna">
+            <span class="chip-avatar">🐈</span>
+            <div>
+              <strong>Luna</strong>
+              <small>Siamese Cat (2 yrs)</small>
+            </div>
+          </button>
+          <button type="button" class="pet-select-chip chip-add" id="btn-add-pet">
+            <i class="ri-add-line"></i>
+            <span>Register Pet</span>
+          </button>
+        </div>
+
+        <div class="passport__top-actions">
+          <button type="button" class="btn__outline" id="btn-edit-passport">
+            <i class="ri-edit-line"></i> Edit Profile
+          </button>
+          <button type="button" class="btn__primary" id="btn-print-passport">
+            <i class="ri-printer-line"></i> Print Official Passport
+          </button>
+        </div>
+      </div>
+
+      <!-- Passport Card & Vitals Wrapper -->
+      <div class="passport__dashboard-grid">
+        <!-- Physical Digital Booklet Card -->
+        <div class="passport__card-booklet">
+          <div class="passport__booklet-header">
+            <div class="passport__emblem">
+              <i class="ri-shield-star-fill"></i>
+            </div>
+            <div>
+              <span class="passport__country">OFFICIAL VETERINARY HEALTH PASSPORT</span>
+              <h3 class="passport__title">Pet Place Health Vault ID</h3>
+            </div>
+            <span class="passport__verified-badge"><i class="ri-checkbox-circle-fill"></i> VERIFIED ISO</span>
+          </div>
+
+          <div class="passport__booklet-body">
+            <div class="passport__photo-box">
+              <div class="passport__photo-frame" id="passport-photo-display">
+                <span class="passport-photo-emoji" id="passport-avatar-emoji">🐕</span>
+              </div>
+              <div class="passport__qr-stamp">
+                <i class="ri-qr-code-line"></i>
+                <small>Scan to Verify</small>
+              </div>
+            </div>
+
+            <div class="passport__details-grid">
+              <div class="passport__field">
+                <label>Pet Full Name</label>
+                <strong id="pp-name">Milo Alexander</strong>
+              </div>
+              <div class="passport__field">
+                <label>Microchip Number</label>
+                <strong id="pp-microchip" class="chip-font">ISO 941-0000-2819-4821</strong>
+              </div>
+              <div class="passport__field">
+                <label>Species & Breed</label>
+                <strong id="pp-breed">Canine / Golden Retriever</strong>
+              </div>
+              <div class="passport__field">
+                <label>Date of Birth / Age</label>
+                <strong id="pp-age">March 14, 2023 (3 Years)</strong>
+              </div>
+              <div class="passport__field">
+                <label>Gender / Reproductive</label>
+                <strong id="pp-gender">Male (Neutered)</strong>
+              </div>
+              <div class="passport__field">
+                <label>Weight & Color</label>
+                <strong id="pp-weight">28.5 kg • Honey Gold</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Alerts Strip -->
+          <div class="passport__alerts-strip">
+            <span class="alert-chip allergy" id="pp-allergy"><i class="ri-alarm-warning-line"></i> Allergy: Chicken
+              Protein</span>
+            <span class="alert-chip fear-free"><i class="ri-heart-line"></i> Gentle Fear-Free Protocol</span>
+            <span class="alert-chip blood"><i class="ri-drop-line"></i> Blood: DEA 1.1 Pos</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Records Tabs (Vaccines, Vitals, Travel Clearance) -->
+        <div class="passport__records-panel">
+          <div class="passport__tab-buttons">
+            <button type="button" class="pp-tab-btn active" data-tab="vaccines">
+              <i class="ri-syringe-line"></i> Vaccinations
+            </button>
+            <button type="button" class="pp-tab-btn" data-tab="vitals">
+              <i class="ri-pulse-line"></i> Vitals & History
+            </button>
+            <button type="button" class="pp-tab-btn" data-tab="travel">
+              <i class="ri-flight-takeoff-line"></i> Travel Clearance
+            </button>
+          </div>
+
+          <!-- Tab 1: Vaccinations -->
+          <div class="pp-tab-content active" id="tab-pp-vaccines">
+            <div class="pp-records-header">
+              <h4>Immunization & Parasite Log</h4>
+              <button type="button" class="btn__outline pp-add-btn" id="btn-add-vaccine">
+                <i class="ri-add-line"></i> Log Vaccine
+              </button>
+            </div>
+            <div class="pp-table-wrap">
+              <table class="pp-records-table">
+                <thead>
+                  <tr>
+                    <th>Vaccine / Treatment</th>
+                    <th>Given Date</th>
+                    <th>Next Due Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="pp-vaccines-tbody">
+                  <tr>
+                    <td><strong>Rabies 3-Year</strong><br><small>Batch #RB-2024-91</small></td>
+                    <td>Jan 15, 2024</td>
+                    <td>Jan 15, 2027</td>
+                    <td><span class="status-pill green">Valid ✓</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>DHPP Core 5-in-1</strong><br><small>Distemper & Parvo</small></td>
+                    <td>May 10, 2024</td>
+                    <td>May 10, 2025</td>
+                    <td><span class="status-pill green">Valid ✓</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bordetella Oral</strong><br><small>Kennel Cough Prevention</small></td>
+                    <td>Oct 05, 2024</td>
+                    <td>Oct 05, 2025</td>
+                    <td><span class="status-pill green">Valid ✓</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>NexGard Spectra</strong><br><small>Flea, Tick & Heartworm</small></td>
+                    <td>Last Month</td>
+                    <td>In 7 Days</td>
+                    <td><span class="status-pill orange">Due Soon ⏳</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 2: Vitals & History -->
+          <div class="pp-tab-content" id="tab-pp-vitals">
+            <div class="pp-records-header">
+              <h4>Physical Vitals & Body Condition</h4>
+              <span class="vital-eval-tag"><i class="ri-heart-pulse-fill"></i> Health Score: 98/100</span>
+            </div>
+            <div class="pp-vitals-grid">
+              <div class="vital-card">
+                <span class="vital-title">Weight Velocity</span>
+                <h3>28.5 kg</h3>
+                <small class="vital-sub green"><i class="ri-arrow-up-line"></i> +0.4kg (Stable & Optimal)</small>
+              </div>
+              <div class="vital-card">
+                <span class="vital-title">Heart Rate</span>
+                <h3>82 bpm</h3>
+                <small class="vital-sub green">Normal Canine Resting</small>
+              </div>
+              <div class="vital-card">
+                <span class="vital-title">Temperature</span>
+                <h3>38.4 °C</h3>
+                <small class="vital-sub green">Normal (38.3 - 39.2 °C)</small>
+              </div>
+              <div class="vital-card">
+                <span class="vital-title">Body Condition (BCS)</span>
+                <h3>5 / 9</h3>
+                <small class="vital-sub green">Ideal Weight & Muscular</small>
+              </div>
+            </div>
+            <div class="pp-recent-notes">
+              <h5>Recent Attending Vet Notes (Nov 2026):</h5>
+              <p>“Milo presented for wellness exam. Heart and lungs clear. Teeth show minimal calculus grade 1. Advised
+                continuing daily dental chew and regular exercise.” — <em>Dr. Maya Senanayake</em></p>
+            </div>
+          </div>
+
+          <!-- Tab 3: Travel Clearance -->
+          <div class="pp-tab-content" id="tab-pp-travel">
+            <div class="pp-travel-card">
+              <div class="travel-stamp-box">
+                <i class="ri-passport-line"></i>
+                <div>
+                  <h4>International & Domestic Travel Clearance</h4>
+                  <p>Certified fit for air, sea, and land transport under IATA live animal regulations.</p>
+                </div>
+              </div>
+              <div class="travel-meta-grid">
+                <div><span>Origin Clinic:</span> <strong>Pet Place Veterinary Hospital</strong></div>
+                <div><span>Accreditation:</span> <strong>ISO 9001 / VSL Colombo</strong></div>
+                <div><span>Fit To Fly:</span> <strong style="color: #10b981;">YES — APPROVED ✓</strong></div>
+                <div><span>Valid Until:</span> <strong>December 31, 2026</strong></div>
+              </div>
+              <button type="button" class="btn__primary btn-download-cert" id="btn-download-cert">
+                <i class="ri-file-download-line"></i> Download Travel Health Certificate (PDF)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PetRx Interactive Medication & Prevention Tracker
+         ========================================================================== -->
+    <section class="section__container medtracker__section" id="med-tracker">
+      <div class="medtracker__wrapper">
+        <div class="medtracker__header">
+          <div>
+            <p class="section__subheader">Prescription & Dose Scheduler</p>
+            <h2 class="section__header" style="text-align: left; margin-bottom: 0.3rem;">PetRx Daily Medication &
+              Prevention Tracker</h2>
+            <p class="section__desc" style="text-align: left; margin: 0;">
+              Never miss your companion's heartworm prevention, ear drops, or antibiotics. Track daily doses and
+              maintain adherence streaks.
+            </p>
+          </div>
+          <button type="button" class="btn__primary" id="btn-open-add-med">
+            <i class="ri-add-circle-fill"></i> Add Medication / Prevention
+          </button>
+        </div>
+
+        <!-- Adherence Streak & Progress Strip -->
+        <div class="medtracker__streak-strip">
+          <div class="streak-badge-card">
+            <div class="streak-icon">🔥</div>
+            <div class="streak-info">
+              <strong id="streak-counter">14 Days Perfect Streak!</strong>
+              <small>Milo has taken all scheduled doses on time</small>
+            </div>
+          </div>
+
+          <div class="daily-progress-card">
+            <div class="progress-labels">
+              <span>Today's Doses Completed</span>
+              <strong id="med-progress-text">2 of 3 Completed (67%)</strong>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="med-progress-fill" style="width: 67%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Today's Schedule Dose List -->
+        <div class="medtracker__schedule-list" id="med-schedule-list">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- E-Commerce Store Section -->
+    <section class="product" id="store">
+      <div class="section__container product__container">
+        <p class="section__subheader">Pet Place Store</p>
+        <h2 class="section__header">Featured Pet Products & Essentials</h2>
+        <p class="section__desc">
+          Veterinarian-approved nutrition, eco-friendly supplies, and durable pet accessories delivered right to your
+          doorstep.
+        </p>
+
+        <!-- Store Controls: Search & Category Filter Tabs -->
+        <div class="store__controls">
+          <div class="store__search-bar">
+            <i class="ri-search-line"></i>
+            <input type="text" id="product-search" placeholder="Search food, accessories, toys..."
+              aria-label="Search Products" />
+          </div>
+
+          <div class="store__filter-tabs">
+            <button class="filter-btn active" data-category="all">All Products</button>
+            <button class="filter-btn" data-category="food">Food & Treats</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+            <button class="filter-btn" data-category="care">Health & Care</button>
+            <button class="filter-btn" data-category="toys">Toys & Play</button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product__grid" id="product-grid">
+          <!-- Product 1 -->
+          <div class="product__card" data-category="care" data-id="prod-1">
+            <div class="product__img-box">
+              <span class="product__badge badge-eco">Eco-Friendly</span>
+              <button class="product__wishlist-btn" title="Save to Wishlist" data-id="prod-1">
+                <i class="ri-heart-line"></i>
+              </button>
+              <img src="assets/product-1.jpg" alt="Bio-Degradable Waste Bags" />
+              <button class="product__quick-view" data-id="prod-1">
+                <i class="ri-eye-line"></i> Quick View
+              </button>
+            </div>
+            <div class="product__info">
+              <div class="product__meta">
+                <span class="product__category">Care & Hygiene</span>
+                <span class="product__rating"><i class="ri-star-fill"></i> 4.9 (128)</span>
+              </div>
+              <h4>Bio-Degradable Waste Bags</h4>
+              <p>100% plant-starch, extra-thick leak-proof waste disposal bags with easy dispenser roll.</p>
+              <div class="product__bottom">
+                <div class="product__price">
+                  <span class="current-price" data-base-price="29.00">$29.00 USD</span>
+                  <span class="old-price" data-base-price="36.00">$36.00</span>
+                </div>
+                <button class="btn-add-cart" data-id="prod-1" data-name="Bio-Degradable Waste Bags" data-price="29.00"
+                  data-img="assets/product-1.jpg">
+                  <i class="ri-shopping-cart-line"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product__card" data-category="accessories" data-id="prod-2">
+            <div class="product__img-box">
+              <span class="product__badge badge-bestseller">Best Seller</span>
+              <button class="product__wishlist-btn" title="Save to Wishlist" data-id="prod-2">
+                <i class="ri-heart-line"></i>
+              </button>
+              <img src="assets/product-2.jpg" alt="Ergonomic Comfort Harness" />
+              <button class="product__quick-view" data-id="prod-2">
+                <i class="ri-eye-line"></i> Quick View
+              </button>
+            </div>
+            <div class="product__info">
+              <div class="product__meta">
+                <span class="product__category">Accessories</span>
+                <span class="product__rating"><i class="ri-star-fill"></i> 5.0 (214)</span>
+              </div>
+              <h4>Ergonomic Comfort Harness</h4>
+              <p>Breathable padded mesh with 3M reflective safety stitching and dual leash clip rings.</p>
+              <div class="product__bottom">
+                <div class="product__price">
+                  <span class="current-price" data-base-price="49.00">$49.00 USD</span>
+                  <span class="old-price" data-base-price="59.00">$59.00</span>
+                </div>
+                <button class="btn-add-cart" data-id="prod-2" data-name="Ergonomic Comfort Harness" data-price="49.00"
+                  data-img="assets/product-2.jpg">
+                  <i class="ri-shopping-cart-line"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product__card" data-category="food" data-id="prod-3">
+            <div class="product__img-box">
+              <span class="product__badge badge-sale">Top Choice</span>
+              <button class="product__wishlist-btn" title="Save to Wishlist" data-id="prod-3">
+                <i class="ri-heart-line"></i>
+              </button>
+              <img src="assets/product-3.jpg" alt="Grain-Free Salmon & Rice Kibble" />
+              <button class="product__quick-view" data-id="prod-3">
+                <i class="ri-eye-line"></i> Quick View
+              </button>
+            </div>
+            <div class="product__info">
+              <div class="product__meta">
+                <span class="product__category">Food & Treats</span>
+                <span class="product__rating"><i class="ri-star-fill"></i> 4.8 (340)</span>
+              </div>
+              <h4>Grain-Free Salmon & Rice Kibble</h4>
+              <p>High-protein natural salmon formula rich in Omega-3 fatty acids for joint support and shiny coat.</p>
+              <div class="product__bottom">
+                <div class="product__price">
+                  <span class="current-price" data-base-price="79.00">$79.00 USD</span>
+                  <span class="old-price" data-base-price="89.00">$89.00</span>
+                </div>
+                <button class="btn-add-cart" data-id="prod-3" data-name="Grain-Free Salmon & Rice Kibble"
+                  data-price="79.00" data-img="assets/product-3.jpg">
+                  <i class="ri-shopping-cart-line"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product__card" data-category="toys" data-id="prod-4">
+            <div class="product__img-box">
+              <span class="product__badge badge-eco">Durable</span>
+              <button class="product__wishlist-btn" title="Save to Wishlist" data-id="prod-4">
+                <i class="ri-heart-line"></i>
+              </button>
+              <img src="assets/product-4.jpg" alt="Dental Chew & IQ Treat Puzzle" />
+              <button class="product__quick-view" data-id="prod-4">
+                <i class="ri-eye-line"></i> Quick View
+              </button>
+            </div>
+            <div class="product__info">
+              <div class="product__meta">
+                <span class="product__category">Toys & Play</span>
+                <span class="product__rating"><i class="ri-star-fill"></i> 4.7 (95)</span>
+              </div>
+              <h4>Dental Chew & IQ Treat Puzzle</h4>
+              <p>Non-toxic natural rubber toy with dental ridges to clean teeth while stimulating mental curiosity.</p>
+              <div class="product__bottom">
+                <div class="product__price">
+                  <span class="current-price" data-base-price="24.00">$24.00 USD</span>
+                  <span class="old-price" data-base-price="30.00">$30.00</span>
+                </div>
+                <button class="btn-add-cart" data-id="prod-4" data-name="Dental Chew & IQ Treat Puzzle"
+                  data-price="24.00" data-img="assets/product-4.jpg">
+                  <i class="ri-shopping-cart-line"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product__card" data-category="care" data-id="prod-5">
+            <div class="product__img-box">
+              <span class="product__badge badge-bestseller">Vet Formula</span>
+              <button class="product__wishlist-btn" title="Save to Wishlist" data-id="prod-5">
+                <i class="ri-heart-line"></i>
+              </button>
+              <img src="assets/product-5.jpg" alt="Probiotic & Coat Chews (90 Count)" />
+              <button class="product__quick-view" data-id="prod-5">
+                <i class="ri-eye-line"></i> Quick View
+              </button>
+            </div>
+            <div class="product__info">
+              <div class="product__meta">
+                <span class="product__category">Health & Care</span>
+                <span class="product__rating"><i class="ri-star-fill"></i> 4.9 (180)</span>
+              </div>
+              <h4>Probiotic & Coat Chews (90 Count)</h4>
+              <p>Veterinarian-formulated daily soft chews supporting gut microbiome, immunity, and healthy fur.</p>
+              <div class="product__bottom">
+                <div class="product__price">
+                  <span class="current-price" data-base-price="38.00">$38.00 USD</span>
+                  <span class="old-price" data-base-price="45.00">$45.00</span>
+                </div>
+                <button class="btn-add-cart" data-id="prod-5" data-name="Probiotic & Coat Chews" data-price="38.00"
+                  data-img="assets/product-5.jpg">
+                  <i class="ri-shopping-cart-line"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product__card" data-category="food" data-id="prod-6">
+            <div class="product__img-box">
+              <span class="product__badge badge-sale">Organic</span>
+              <button class="product__wishlist-btn" title="Save to Wishlist" data-id="prod-6">
+                <i class="ri-heart-line"></i>
+              </button>
+              <img src="assets/product-6.jpg" alt="Freeze-Dried Turkey & Cranberry Treats" />
+              <button class="product__quick-view" data-id="prod-6">
+                <i class="ri-eye-line"></i> Quick View
+              </button>
+            </div>
+            <div class="product__info">
+              <div class="product__meta">
+                <span class="product__category">Food & Treats</span>
+                <span class="product__rating"><i class="ri-star-fill"></i> 5.0 (310)</span>
+              </div>
+              <h4>Freeze-Dried Turkey & Cranberry Treats</h4>
+              <p>Single-ingredient human-grade turkey bites without artificial preservatives or fillers.</p>
+              <div class="product__bottom">
+                <div class="product__price">
+                  <span class="current-price" data-base-price="19.00">$19.00 USD</span>
+                  <span class="old-price" data-base-price="25.00">$25.00</span>
+                </div>
+                <button class="btn-add-cart" data-id="prod-6" data-name="Freeze-Dried Turkey & Cranberry Treats"
+                  data-price="19.00" data-img="assets/product-6.jpg">
+                  <i class="ri-shopping-cart-line"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Interactive Pet Health & Calorie Calculator Section -->
+    <section class="section__container calculator__section" id="calculator">
+      <p class="section__subheader">Smart Care Tools</p>
+      <h2 class="section__header">Pet Age & Calorie Calculator</h2>
+      <p class="section__desc">
+        Determine your pet's precise daily nutritional calorie needs, ideal water intake, and equivalent human age in
+        seconds.
+      </p>
+
+      <div class="calc__wrapper">
+        <form class="calc__form" id="pet-calc-form">
+          <div class="calc__row">
+            <div class="calc__group">
+              <label for="pet-type"><i class="ri-paw-fill"></i> Pet Species</label>
+              <select id="pet-type" required>
+                <option value="dog">Dog 🐶</option>
+                <option value="cat">Cat 🐱</option>
+              </select>
+            </div>
+            <div class="calc__group">
+              <label for="pet-weight"><i class="ri-scales-3-line"></i> Weight (kg)</label>
+              <input type="number" id="pet-weight" min="0.5" max="100" step="0.5" value="12" required />
+            </div>
+          </div>
+
+          <div class="calc__row">
+            <div class="calc__group">
+              <label for="pet-age-stage"><i class="ri-calendar-line"></i> Life Stage</label>
+              <select id="pet-age-stage" required>
+                <option value="puppy">Puppy / Kitten (&lt; 1 Year)</option>
+                <option value="adult" selected>Adult (1 - 7 Years)</option>
+                <option value="senior">Senior (7+ Years)</option>
+              </select>
+            </div>
+            <div class="calc__group">
+              <label for="pet-activity"><i class="ri-run-line"></i> Daily Activity Level</label>
+              <select id="pet-activity" required>
+                <option value="low">Low (Couch potato / indoor)</option>
+                <option value="moderate" selected>Moderate (Daily walks & play)</option>
+                <option value="high">High (Agility / working / very active)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn__primary" style="margin-top: 0.5rem; justify-content: center;">
+            <i class="ri-calculator-line"></i> Calculate Health Profile
+          </button>
+        </form>
+
+        <div class="calc__result-box" id="calc-result-box">
+          <h4 style="font-size: 1.2rem; color: var(--text-dark);">Estimated Daily Needs</h4>
+          <div class="calc__metrics">
+            <div class="metric__item">
+              <span>Human Age Equivalent</span>
+              <h3 id="res-human-age">~32 yrs</h3>
+            </div>
+            <div class="metric__item">
+              <span>Daily Caloric Intake</span>
+              <h3 id="res-calories">~680 kcal</h3>
+            </div>
+            <div class="metric__item">
+              <span>Recommended Water</span>
+              <h3 id="res-water">~600 ml</h3>
+            </div>
+            <div class="metric__item">
+              <span>Body Condition</span>
+              <h3 id="res-status" style="color: var(--accent-teal);">Healthy Weight</h3>
+            </div>
+          </div>
+          <p id="res-tip" style="font-size: 0.88rem; color: var(--text-muted);">
+            💡 <em>Tip: Divide daily calories into two balanced meals. Always keep fresh filtered water readily
+              available.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Testimonials Slider Section -->
+    <section class="client" id="testimonials">
+      <div class="section__container client__container">
+        <p class="section__subheader">Testimonials</p>
+        <h2 class="section__header">What Pet Parents Say About Us</h2>
+        <p class="section__desc">
+          Over 2,500 happy pet owners trust Pet Place for veterinary care, grooming, and supplies.
+        </p>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-1.jpg" alt="Sarah Johnson" />
+                  <div>
+                    <h4>Sarah Johnson</h4>
+                    <h5>Graphic Designer</h5>
+                  </div>
+                </div>
+                <div class="client__rating">
+                  <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                </div>
+                <p>
+                  "The care my golden retriever received at Pet Place was exceptional! The vets were gentle,
+                  thorough, and clearly care deeply about animals."
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-2.jpg" alt="Michael Adams" />
+                  <div>
+                    <h4>Michael Adams</h4>
+                    <h5>Software Engineer</h5>
+                  </div>
+                </div>
+                <div class="client__rating">
+                  <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                </div>
+                <p>
+                  "Pet Place saved my cat during a late-night respiratory emergency! Their quick response,
+                  modern equipment, and compassionate surgeons made all the difference."
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-3.jpg" alt="Emily Martinez" />
+                  <div>
+                    <h4>Emily Martinez</h4>
+                    <h5>Teacher</h5>
+                  </div>
+                </div>
+                <div class="client__rating">
+                  <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                </div>
+                <p>
+                  "I trust Pet Place with all three of my rescue dogs. Their personalized vaccination plans
+                  and online booking system make pet health management effortless."
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-4.jpg" alt="Jason Lee" />
+                  <div>
+                    <h4>Jason Lee</h4>
+                    <h5>Marketing Specialist</h5>
+                  </div>
+                </div>
+                <div class="client__rating">
+                  <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                </div>
+                <p>
+                  "The grooming and spa services here are remarkable. My nervous poodle came back looking
+                  immaculate, happy, and stress-free. Highly recommended!"
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <div class="client__details">
+                  <img src="assets/client-5.jpg" alt="David Thompson" />
+                  <div>
+                    <h4>David Thompson</h4>
+                    <h5>Accountant</h5>
+                  </div>
+                </div>
+                <div class="client__rating">
+                  <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                    class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                </div>
+                <p>
+                  "The e-commerce store is so convenient. High quality salmon dog food arrived within 24 hours,
+                  and customer service even called to check on my dog's allergy progress!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FAQ Accordion Section -->
+    <section class="section__container faq__section" id="faq">
+      <p class="section__subheader">Frequently Asked Questions</p>
+      <h2 class="section__header">Everything You Need to Know</h2>
+      <p class="section__desc">
+        Got questions about our clinical care, booking procedures, or shipping? Here are fast answers.
+      </p>
+
+      <div class="faq__container">
+        <!-- FAQ 1 -->
+        <div class="faq__item active">
+          <div class="faq__header">
+            <h4>What should I prepare for my pet's first clinic visit?</h4>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="faq__body">
+            <p>
+              Please bring any prior medical or vaccination records, a list of current foods and medications,
+              and ensure dogs are leashed while cats are placed securely in a travel carrier. If your pet is anxious,
+              let our staff know upon arrival so we can provide a quiet exam room.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq__item">
+          <div class="faq__header">
+            <h4>How does your 24/7 emergency service work?</h4>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="faq__body">
+            <p>
+              Our emergency trauma team is on-site 24 hours a day, 365 days a year. No advance appointment is required
+              for severe emergencies. However, calling our emergency line (+94 70 876 5432) while en route allows our
+              triage team to prepare the trauma suite and oxygen equipment before you arrive.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq__item">
+          <div class="faq__header">
+            <h4>What are your shipping rates and delivery times for store orders?</h4>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="faq__body">
+            <p>
+              We offer <strong>Free Standard Shipping</strong> on all product orders over $50.00! Orders placed
+              before 2:00 PM are dispatched the same business day and typically arrive within 24-48 hours. Express
+              same-day courier delivery is also available in select metropolitan zones.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq__item">
+          <div class="faq__header">
+            <h4>What vaccinations are mandatory before pet boarding?</h4>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="faq__body">
+            <p>
+              For the safety of all guests, dogs must be up-to-date on Rabies, DHPP (Distemper, Hepatitis, Parvovirus,
+              Parainfluenza),
+              and Bordetella (Kennel Cough). Cats require Rabies and FVRCP. Proof of flea/tick prevention within the
+              last
+              30 days is also required.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq__item">
+          <div class="faq__header">
+            <h4>Can I reschedule or cancel my appointment?</h4>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+          <div class="faq__body">
+            <p>
+              Yes! You can reschedule or cancel routine appointments free of charge with at least 12 hours advance
+              notice
+              by contacting our clinic via phone, email, or through your appointment confirmation voucher.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Instagram & Social Gallery Section -->
+    <section class="section__container instagram__container">
+      <div
+        style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+        <div>
+          <p class="tagline">COMMUNITY</p>
+          <h2 class="section__header" style="text-align: left; margin-bottom: 0;">Follow @PetPlaceClinic</h2>
+        </div>
+        <a href="https://www.instagram.com/PetPlaceClinic" target="_blank" rel="noopener noreferrer"
+          class="btn__secondary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">
+          <i class="ri-instagram-line"></i> Visit Instagram
+        </a>
+      </div>
+
+      <div class="instagram__grid">
+        <div class="instagram__item">
+          <img src="assets/instagram-1.jpg" alt="Happy pet on Instagram" />
+          <div class="instagram__overlay">
+            <i class="ri-instagram-line main-icon"></i>
+            <div class="instagram__stats">
+              <span><i class="ri-heart-fill"></i> 1.4k</span>
+              <span><i class="ri-chat-3-fill"></i> 82</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="instagram__item">
+          <img src="assets/instagram-2.jpg" alt="Veterinary checkup on Instagram" />
+          <div class="instagram__overlay">
+            <i class="ri-instagram-line main-icon"></i>
+            <div class="instagram__stats">
+              <span><i class="ri-heart-fill"></i> 2.1k</span>
+              <span><i class="ri-chat-3-fill"></i> 114</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="instagram__item">
+          <img src="assets/instagram-3.jpg" alt="Groomed puppy on Instagram" />
+          <div class="instagram__overlay">
+            <i class="ri-instagram-line main-icon"></i>
+            <div class="instagram__stats">
+              <span><i class="ri-heart-fill"></i> 980</span>
+              <span><i class="ri-chat-3-fill"></i> 43</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="instagram__item">
+          <img src="assets/instagram-4.jpg" alt="Pet care clinic moment" />
+          <div class="instagram__overlay">
+            <i class="ri-instagram-line main-icon"></i>
+            <div class="instagram__stats">
+              <span><i class="ri-heart-fill"></i> 3.2k</span>
+              <span><i class="ri-chat-3-fill"></i> 165</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PawAlert — Lost & Found Community Bulletin & Instant Flyer Generator
+         ========================================================================== -->
+    <section class="section__container lostfound__section" id="lost-found">
+      <div class="lostfound__header-wrap">
+        <div>
+          <p class="section__subheader">Community Pet Safety Network</p>
+          <h2 class="section__header" style="text-align: left; margin-bottom: 0.5rem;">
+            PawAlert: Community Lost & Found Bulletin
+          </h2>
+          <p class="section__desc" style="text-align: left; margin: 0;">
+            Every second counts when a companion is missing. Post alerts, report sightings, or generate high-contrast
+            printable missing pet flyers instantly.
+          </p>
+        </div>
+        <button type="button" class="btn__primary btn-report-lost" id="btn-open-report-pet">
+          <i class="ri-alarm-warning-fill"></i> Report Lost or Found Pet
+        </button>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="lostfound__filter-bar">
+        <div class="lostfound__tabs">
+          <button type="button" class="lf-tab-btn active" data-filter="all">All Alerts (4)</button>
+          <button type="button" class="lf-tab-btn" data-filter="lost">🚨 Lost Pets (2)</button>
+          <button type="button" class="lf-tab-btn" data-filter="found">🐾 Found Pets (1)</button>
+          <button type="button" class="lf-tab-btn" data-filter="reunited">🎉 Reunited (1)</button>
+        </div>
+        <div class="lostfound__search">
+          <i class="ri-search-line"></i>
+          <input type="text" id="lf-search-input" placeholder="Search by breed, neighborhood, microchip..." />
+        </div>
+      </div>
+
+      <!-- Alerts Grid -->
+      <div class="lostfound__grid" id="lostfound-grid">
+        <!-- Alert 1 -->
+        <div class="lf-card" data-status="lost">
+          <div class="lf-card__img-box">
+            <span class="lf-badge lost">🚨 MISSING / LOST</span>
+            <span class="lf-reward-tag">Reward: $250</span>
+            <img src="assets/product-2.jpg" alt="Rusty Beagle" />
+          </div>
+          <div class="lf-card__body">
+            <div class="lf-card__meta">
+              <h4>Rusty (Beagle / Hound)</h4>
+              <span class="lf-date"><i class="ri-time-line"></i> 2 Days Ago</span>
+            </div>
+            <p class="lf-desc">Tricolor brown and white beagle wearing a teal reflective harness. Extremely friendly,
+              answers to whistle.</p>
+            <div class="lf-info-chips">
+              <span><i class="ri-map-pin-line"></i> Colombo 07, Near Viharamahadevi</span>
+              <span><i class="ri-barcode-line"></i> Microchip: 941-xxx-882</span>
+            </div>
+            <div class="lf-card__actions">
+              <button type="button" class="btn__outline lf-btn-flyer" data-pet-name="Rusty" data-breed="Beagle / Hound"
+                data-location="Colombo 07" data-reward="$250" data-phone="+94 77 123 4567"
+                data-img="assets/product-2.jpg">
+                <i class="ri-printer-line"></i> Print Flyer
+              </button>
+              <a href="tel:+94771234567" class="btn__primary lf-btn-contact">
+                <i class="ri-phone-fill"></i> Contact Owner
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert 2 -->
+        <div class="lf-card" data-status="found">
+          <div class="lf-card__img-box">
+            <span class="lf-badge found">🐾 FOUND & SAFE</span>
+            <img src="assets/client-3.jpg" alt="White Persian Cat" />
+          </div>
+          <div class="lf-card__body">
+            <div class="lf-card__meta">
+              <h4>Found: Snowball (Persian Cat)</h4>
+              <span class="lf-date"><i class="ri-time-line"></i> Today, 9:30 AM</span>
+            </div>
+            <p class="lf-desc">Pure white fluffy cat with blue eyes found resting under car porch. Brought to Pet Place
+              Clinic for scanning.</p>
+            <div class="lf-info-chips">
+              <span><i class="ri-map-pin-line"></i> Havelock City / Wellawatte</span>
+              <span><i class="ri-shield-check-line"></i> Safe at Pet Place ER Clinic</span>
+            </div>
+            <div class="lf-card__actions">
+              <button type="button" class="btn__outline lf-btn-flyer" data-pet-name="Snowball (Found)"
+                data-breed="Persian White Cat" data-location="Havelock City" data-reward="Safe at Clinic"
+                data-phone="+94 70 876 5432" data-img="assets/client-3.jpg">
+                <i class="ri-printer-line"></i> Print Flyer
+              </button>
+              <a href="tel:+94708765432" class="btn__primary lf-btn-contact">
+                <i class="ri-hospital-line"></i> Call Clinic
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert 3 -->
+        <div class="lf-card" data-status="lost">
+          <div class="lf-card__img-box">
+            <span class="lf-badge lost">🚨 MISSING / LOST</span>
+            <span class="lf-reward-tag">Reward: $150</span>
+            <img src="assets/instagram-1.jpg" alt="Bruno Boxer" />
+          </div>
+          <div class="lf-card__body">
+            <div class="lf-card__meta">
+              <h4>Bruno (Boxer Mix)</h4>
+              <span class="lf-date"><i class="ri-time-line"></i> Yesterday</span>
+            </div>
+            <p class="lf-desc">Fawn boxer with white chest patch. Timid around loud motorcycles. Escaped gate during
+              evening thunder.</p>
+            <div class="lf-info-chips">
+              <span><i class="ri-map-pin-line"></i> Rajagiriya / Nawala Road</span>
+              <span><i class="ri-barcode-line"></i> Microchip: 941-xxx-109</span>
+            </div>
+            <div class="lf-card__actions">
+              <button type="button" class="btn__outline lf-btn-flyer" data-pet-name="Bruno" data-breed="Boxer Mix"
+                data-location="Rajagiriya" data-reward="$150" data-phone="+94 71 890 1234"
+                data-img="assets/instagram-1.jpg">
+                <i class="ri-printer-line"></i> Print Flyer
+              </button>
+              <a href="tel:+94718901234" class="btn__primary lf-btn-contact">
+                <i class="ri-phone-fill"></i> Contact Owner
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert 4 -->
+        <div class="lf-card" data-status="reunited">
+          <div class="lf-card__img-box">
+            <span class="lf-badge reunited">🎉 REUNITED</span>
+            <img src="assets/client-4.jpg" alt="Cooper Golden" />
+          </div>
+          <div class="lf-card__body">
+            <div class="lf-card__meta">
+              <h4>Cooper (Golden Retriever)</h4>
+              <span class="lf-date"><i class="ri-checkbox-circle-fill" style="color: #10b981;"></i> Successfully
+                Reunited!</span>
+            </div>
+            <p class="lf-desc">Cooper has been happily returned to the Wickremasinghe family thanks to an alert neighbor
+              who scanned his microchip code!</p>
+            <div class="lf-info-chips">
+              <span><i class="ri-map-pin-line"></i> Mount Lavinia</span>
+              <span><i class="ri-heart-fill" style="color: #f72585;"></i> PetPlace PawAlert Success</span>
+            </div>
+            <div class="lf-card__actions">
+              <span class="lf-reunited-pill"><i class="ri-check-double-line"></i> Case Closed & Reunited</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Pre-Footer High-Impact CTA Strip
+         ========================================================================== -->
+    <div class="footer__cta-wrap">
+      <div class="footer__cta-card">
+        <div class="footer__cta-content">
+          <span class="footer__cta-badge">
+            <i class="ri-heart-pulse-fill"></i> World-Class Veterinary Care
+          </span>
+          <h2>Give Your Companion The Care They Truly Deserve</h2>
+          <p>
+            From late-night emergency care to personalized diet plans and luxury grooming —
+            our certified veterinary team is ready to welcome your family 24 hours a day.
+          </p>
+        </div>
+        <div class="footer__cta-actions">
+          <button class="btn__cta-primary open-booking-btn">
+            <i class="ri-calendar-check-fill"></i> Book Appointment
+          </button>
+          <a href="tel:+94708765432" class="btn__cta-secondary">
+            <i class="ri-phone-fill"></i> Emergency: +94 70 876 5432
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         Modernized Footer Section
+         ========================================================================== -->
+    <footer id="contact" class="site-footer">
+      <!-- Main Footer Columns -->
+      <div class="section__container footer__container">
+        <!-- Col 1: Brand & Hospital Identity -->
+        <div class="footer__col footer__col-brand">
+          <div class="footer__logo">
+            <a href="#home">Pet Place<span>🐾</span></a>
+          </div>
+          <p class="footer__brand-text">
+            Elevating modern veterinary medicine, organic grooming, and premium pet nutrition.
+            Trusted by over 15,000 pet parents with fear-free gentle handling and 24/7 trauma response.
+          </p>
+
+          <div class="footer__trust-badges">
+            <span class="trust-badge"><i class="ri-shield-check-fill"></i> Fear-Free Certified</span>
+            <span class="trust-badge"><i class="ri-award-fill"></i> 2026 Clinic of Year</span>
+          </div>
+
+          <div class="footer__facility-card">
+            <img src="assets/footer.jpg" alt="Pet Place Hospital Facility" />
+            <div class="facility-info">
+              <h5>Colombo Central Hospital</h5>
+              <p><i class="ri-map-pin-fill"></i> 3-Story Accredited Medical Center</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Veterinary Care Links -->
+        <div class="footer__col">
+          <h4 class="footer__title">Veterinary Care</h4>
+          <ul class="footer__links">
+            <li><a href="#televet-section"><i class="ri-video-chat-line"></i> TeleVet 24/7 Virtual Consult</a></li>
+            <li><a href="#passport"><i class="ri-passport-line"></i> Digital Pet Passport</a></li>
+            <li><a href="#med-tracker"><i class="ri-capsule-line"></i> PetRx Medication Tracker</a></li>
+            <li><a href="#lost-found"><i class="ri-broadcast-line"></i> PawAlert Lost & Found</a></li>
+            <li><a href="#service"><i class="ri-arrow-right-s-line"></i> 24/7 Emergency & ICU</a></li>
+            <li><a href="#service"><i class="ri-arrow-right-s-line"></i> Core Vaccines & Microchip</a></li>
+            <li><a href="#service"><i class="ri-arrow-right-s-line"></i> Clinical Nutrition Plans</a></li>
+            <li><a href="#service"><i class="ri-arrow-right-s-line"></i> Ultrasonic Dental Care</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Pet Store & Products -->
+        <div class="footer__col">
+          <h4 class="footer__title">Pet Store & Tools</h4>
+          <ul class="footer__links">
+            <li><a href="#store"><i class="ri-arrow-right-s-line"></i> Premium Dog Food</a></li>
+            <li><a href="#store"><i class="ri-arrow-right-s-line"></i> Reflective Safety Gear</a></li>
+            <li><a href="#store"><i class="ri-arrow-right-s-line"></i> Biodegradable Waste Bags</a></li>
+            <li><a href="#store"><i class="ri-arrow-right-s-line"></i> Probiotic Supplements</a></li>
+            <li><a href="#calculator"><i class="ri-arrow-right-s-line"></i> Pet Health Calculator</a></li>
+            <li><a href="javascript:void(0)" id="footer-track-btn"><i class="ri-truck-line"></i> Track Your Order</a>
+            </li>
+            <li><a href="javascript:void(0)" id="footer-pawbot-btn"><i class="ri-robot-2-line"></i> Chat with PawBot</a>
+            </li>
+            <li><a href="#faq"><i class="ri-arrow-right-s-line"></i> Delivery & Return Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Emergency Status -->
+        <div class="footer__col">
+          <h4 class="footer__title">Contact & Clinic</h4>
+
+          <div class="footer__status-badge">
+            <span class="pulse-dot"></span>
+            <span>Emergency Unit: <strong>Open 24/7</strong></span>
+          </div>
+
+          <ul class="footer__contact-items">
+            <li>
+              <div class="contact-icon"><i class="ri-map-pin-2-fill"></i></div>
+              <div class="contact-details">
+                <span>No. 25, Galle Road, Colombo 03, Sri Lanka</span>
+                <a href="https://maps.google.com" target="_blank" rel="noreferrer" class="map-link">
+                  Get Directions <i class="ri-external-link-line"></i>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="ri-phone-fill"></i></div>
+              <div class="contact-details">
+                <span>Emergency Hotline:</span>
+                <a href="tel:+94708765432" class="phone-link">+94 70 876 5432</a>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="ri-mail-fill"></i></div>
+              <div class="contact-details">
+                <span>General Inquiries:</span>
+                <a href="mailto:care@petplace.com" class="mail-link">care@petplace.com</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 5: VIP Club & Newsletter -->
+        <div class="footer__col footer__col-newsletter">
+          <h4 class="footer__title">Join the VIP Pet Club</h4>
+          <p class="newsletter-desc">
+            Subscribe for free veterinary nutrition advice, vaccination alerts, and an instant <strong>10% off</strong>
+            voucher!
+          </p>
+
+          <form class="footer__newsletter" id="newsletter-form">
+            <div class="newsletter-field">
+              <i class="ri-mail-send-line"></i>
+              <input type="email" id="newsletter-email" placeholder="Enter your email" required />
+            </div>
+            <button type="submit" aria-label="Subscribe to VIP Club">
+              Subscribe <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+
+          <div class="newsletter-perks">
+            <span><i class="ri-check-line"></i> Promo code: <strong>PET10</strong></span>
+            <span><i class="ri-check-line"></i> No spam, cancel anytime</span>
+          </div>
+
+          <div class="footer__socials-section">
+            <span class="socials-title">Follow Our Community:</span>
+            <div class="footer__socials">
+              <a href="https://www.facebook.com/PetPlaceClinic" target="_blank" rel="noopener noreferrer"
+                aria-label="Follow Pet Place on Facebook" title="Follow us on Facebook (@PetPlaceClinic)"
+                class="social-icon facebook">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="https://www.instagram.com/PetPlaceClinic" target="_blank" rel="noopener noreferrer"
+                aria-label="Follow Pet Place on Instagram" title="Follow us on Instagram (@PetPlaceClinic)"
+                class="social-icon instagram">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="https://x.com/PetPlaceClinic" target="_blank" rel="noopener noreferrer"
+                aria-label="Follow Pet Place on X (Twitter)" title="Follow us on X (@PetPlaceClinic)"
+                class="social-icon twitter">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+              <a href="https://www.youtube.com/@PetPlaceClinic" target="_blank" rel="noopener noreferrer"
+                aria-label="Subscribe to Pet Place on YouTube" title="Subscribe on YouTube (@PetPlaceClinic)"
+                class="social-icon youtube">
+                <i class="ri-youtube-fill"></i>
+              </a>
+              <a href="https://www.tiktok.com/@PetPlaceClinic" target="_blank" rel="noopener noreferrer"
+                aria-label="Follow Pet Place on TikTok" title="Follow us on TikTok (@PetPlaceClinic)"
+                class="social-icon tiktok">
+                <i class="ri-tiktok-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-container">
+          <div class="footer__copyright">
+            <p>© 2026 <strong>Pet Place Inc.</strong> All rights reserved. Crafted with care for pet lovers worldwide.
+            </p>
+          </div>
+
+          <div class="footer__payments">
+            <span class="payment-title">Guaranteed Safe Checkout:</span>
+            <div class="payment-icons">
+              <span class="pay-chip" title="Visa"><i class="ri-visa-line"></i> Visa</span>
+              <span class="pay-chip" title="Mastercard"><i class="ri-mastercard-line"></i> MC</span>
+              <span class="pay-chip" title="PayPal"><i class="ri-paypal-line"></i> PayPal</span>
+              <span class="pay-chip ssl" title="SSL Encrypted"><i class="ri-lock-2-line"></i> 256-Bit SSL</span>
+            </div>
+          </div>
+
+          <ul class="footer__legal-links">
+            <li><a href="#about">Privacy Policy</a></li>
+            <li><a href="#about">Terms of Service</a></li>
+            <li><a href="#about">Veterinary Ethics</a></li>
+            <li><a href="#faq">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /#main-app -->
+
+  <!-- ==========================================================================
+         Slide-out Shopping Cart Drawer
+         ========================================================================== -->
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart__header">
+        <h3><i class="ri-shopping-bag-3-fill" style="color: var(--primary-accent);"></i> Your Cart</h3>
+        <button class="cart__close-btn" id="cart-close" aria-label="Close Cart">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="cart__body" id="cart-items-container">
+        <!-- Populated by JavaScript -->
+      </div>
+
+      <div class="cart__footer" id="cart-footer">
+        <div class="promo-box">
+          <input type="text" id="promo-input" placeholder="Promo code (Try: PET10)" />
+          <button type="button" id="apply-promo-btn">Apply</button>
+        </div>
+
+        <div class="cart__summary">
+          <div class="cart__summary-row">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="cart__summary-row" id="discount-row" style="display: none; color: var(--accent-teal);">
+            <span>Discount (10%):</span>
+            <span id="cart-discount">-$0.00</span>
+          </div>
+          <div class="cart__summary-row">
+            <span>Estimated Shipping:</span>
+            <span id="cart-shipping">$0.00</span>
+          </div>
+          <div class="cart__summary-row total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+        </div>
+
+        <button class="btn-checkout" id="checkout-btn">
+          Proceed to Checkout <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+         Interactive Appointment Booking Wizard Modal
+         ========================================================================== -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-content">
+      <div class="modal__header">
+        <h3><i class="ri-calendar-check-fill" style="color: var(--primary-accent);"></i> Book a Vet Appointment</h3>
+        <span class="modal__close" id="close-booking-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <!-- Wizard Steps Progress -->
+        <div class="wizard__steps">
+          <div class="wizard__step-item active" data-step="1">
+            <span class="step-number">1</span>
+            <span class="step-label">Service</span>
+          </div>
+          <div class="wizard__step-item" data-step="2">
+            <span class="step-number">2</span>
+            <span class="step-label">Pet Info</span>
+          </div>
+          <div class="wizard__step-item" data-step="3">
+            <span class="step-number">3</span>
+            <span class="step-label">Date/Time</span>
+          </div>
+          <div class="wizard__step-item" data-step="4">
+            <span class="step-number">4</span>
+            <span class="step-label">Confirm</span>
+          </div>
+        </div>
+
+        <!-- Wizard Panel 1: Select Service -->
+        <div class="wizard-panel active" id="wizard-panel-1">
+          <h4 style="margin-bottom: 1rem; color: var(--text-dark);">Choose a Veterinary Service:</h4>
+          <div class="service-select-grid">
+            <div class="service-option-card selected" data-value="Routine Wellness Exam">
+              <i class="ri-heart-pulse-line"></i>
+              <h5>Routine Exam</h5>
+              <span>$45.00</span>
+            </div>
+            <div class="service-option-card" data-value="Vaccination & Microchip">
+              <i class="ri-syringe-line"></i>
+              <h5>Vaccination</h5>
+              <span>$50.00</span>
+            </div>
+            <div class="service-option-card" data-value="Emergency Trauma Care">
+              <i class="ri-alarm-warning-line"></i>
+              <h5>Emergency</h5>
+              <span>$85.00</span>
+            </div>
+            <div class="service-option-card" data-value="Dental Scaling & Spa">
+              <i class="ri-sparkling-line"></i>
+              <h5>Dental Care</h5>
+              <span>$60.00</span>
+            </div>
+            <div class="service-option-card" data-value="Nutritional Consultation">
+              <i class="ri-restaurant-line"></i>
+              <h5>Nutrition</h5>
+              <span>$40.00</span>
+            </div>
+            <div class="service-option-card" data-value="Grooming & Hygiene">
+              <i class="ri-scissors-2-line"></i>
+              <h5>Grooming</h5>
+              <span>$50.00</span>
+            </div>
+          </div>
+          <div class="wizard-nav">
+            <div></div>
+            <button class="btn__primary btn-next-step" data-next="2">Next: Pet Details &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Wizard Panel 2: Pet Information -->
+        <div class="wizard-panel" id="wizard-panel-2">
+          <h4 style="margin-bottom: 1rem; color: var(--text-dark);">Tell Us About Your Pet:</h4>
+          <div class="form-grid">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Pet's Name *</label>
+              <input type="text" id="booking-pet-name" placeholder="e.g. Milo, Luna" required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Pet Species *</label>
+                <select id="booking-pet-species">
+                  <option value="Dog">Dog 🐕</option>
+                  <option value="Cat">Cat 🐈</option>
+                  <option value="Bird">Bird 🦜</option>
+                  <option value="Rabbit">Rabbit 🐇</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Pet Age</label>
+                <input type="text" id="booking-pet-age" placeholder="e.g. 2 years" />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Reason for Visit /
+                Symptoms</label>
+              <textarea id="booking-pet-notes" rows="3"
+                placeholder="Briefly describe what your pet needs or any symptoms..."></textarea>
+            </div>
+          </div>
+          <div class="wizard-nav">
+            <button class="btn__secondary btn-prev-step" data-prev="1">&larr; Back</button>
+            <button class="btn__primary btn-next-step" data-next="3">Next: Select Slot &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Wizard Panel 3: Date, Time & Specialist -->
+        <div class="wizard-panel" id="wizard-panel-3">
+          <h4 style="margin-bottom: 1rem; color: var(--text-dark);">Choose Specialist & Preferred Slot:</h4>
+          <div class="form-grid">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Preferred
+                Veterinarian</label>
+              <select id="booking-vet-select">
+                <option value="Dr. Sarah Wilson (Lead Surgeon)">Dr. Sarah Wilson — Lead Surgeon & Director</option>
+                <option value="Dr. Marcus Vance (Emergency Specialist)">Dr. Marcus Vance — Emergency Care</option>
+                <option value="Dr. Elena Rostova (Feline & Nutrition Specialist)">Dr. Elena Rostova — Feline Care & Diet
+                </option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Select Date *</label>
+              <input type="date" id="booking-date" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Available Time Slots
+                *</label>
+              <div class="time-slot-grid">
+                <button type="button" class="slot-btn selected" data-time="09:00 AM">09:00 AM</button>
+                <button type="button" class="slot-btn" data-time="10:30 AM">10:30 AM</button>
+                <button type="button" class="slot-btn" data-time="11:45 AM">11:45 AM</button>
+                <button type="button" class="slot-btn" data-time="02:00 PM">02:00 PM</button>
+                <button type="button" class="slot-btn" data-time="03:30 PM">03:30 PM</button>
+                <button type="button" class="slot-btn" data-time="05:00 PM">05:00 PM</button>
+              </div>
+            </div>
+          </div>
+          <div class="wizard-nav">
+            <button class="btn__secondary btn-prev-step" data-prev="2">&larr; Back</button>
+            <button class="btn__primary btn-next-step" data-next="4">Next: Owner Details &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Wizard Panel 4: Owner Contact & Submit -->
+        <div class="wizard-panel" id="wizard-panel-4">
+          <h4 style="margin-bottom: 1rem; color: var(--text-dark);">Owner Contact & Final Confirmation:</h4>
+          <div class="form-grid">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Your Full Name *</label>
+                <input type="text" id="owner-name" placeholder="John Doe" required />
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Phone Number *</label>
+                <input type="tel" id="owner-phone" placeholder="+94 7X XXX XXXX" required />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-dark);">Email Address *</label>
+              <input type="email" id="owner-email" placeholder="john@example.com" required />
+            </div>
+          </div>
+
+          <!-- Booking Summary Box -->
+          <div
+            style="margin-top: 1.2rem; padding: 1rem; border-radius: var(--radius-sm); background-color: var(--bg-secondary); border: 1px solid var(--border-color); font-size: 0.9rem;">
+            <p><strong>Service:</strong> <span id="summary-service">Routine Wellness Exam</span></p>
+            <p><strong>Pet:</strong> <span id="summary-pet">-</span></p>
+            <p><strong>Appointment Time:</strong> <span id="summary-datetime">-</span></p>
+            <p><strong>Doctor:</strong> <span id="summary-doctor">-</span></p>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn__secondary btn-prev-step" data-prev="3">&larr; Back</button>
+            <button class="btn__primary" id="confirm-booking-btn">
+              <i class="ri-check-double-line"></i> Confirm Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Wizard Success Panel -->
+        <div class="wizard-panel" id="wizard-panel-success" style="text-align: center; padding: 1.5rem 0;">
+          <div
+            style="width: 70px; height: 70px; border-radius: var(--radius-full); background-color: #d1fae5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 1rem auto;">
+            <i class="ri-checkbox-circle-fill"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; color: var(--text-dark); margin-bottom: 0.5rem;">Appointment Confirmed!</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            A confirmation email & SMS has been dispatched. Here is your reference code:
+          </p>
+          <div
+            style="display: inline-block; padding: 0.6rem 1.8rem; background-color: var(--bg-secondary); border: 2px dashed var(--primary-accent); border-radius: var(--radius-md); font-size: 1.3rem; font-weight: 800; color: var(--primary-accent); margin-bottom: 1.5rem;"
+            id="booking-ref-code">
+            PET-2026-8941
+          </div>
+          <br />
+          <button class="btn__primary" id="close-booking-success-btn">
+            Done & Return to Site
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+         Product Quick View Modal
+         ========================================================================== -->
+  <div class="modal-overlay" id="quickview-modal">
+    <div class="modal-content" style="max-width: 700px;">
+      <div class="modal__header">
+        <h3>Product Details</h3>
+        <span class="modal__close" id="close-quickview-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <div class="quick-view__grid">
+          <div class="quick-view__img">
+            <img id="qv-img" src="assets/product-1.jpg" alt="Product view" />
+          </div>
+          <div class="quick-view__details">
+            <span id="qv-badge" class="product__badge badge-bestseller"
+              style="position: static; display: inline-block; margin-bottom: 0.6rem;">Featured</span>
+            <h3 id="qv-title">Product Name</h3>
+            <div class="product__rating" style="margin-bottom: 0.8rem;">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+              <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 0.3rem;">(4.9 / 5 Rating)</span>
+            </div>
+            <div class="price" id="qv-price">$29.00 USD</div>
+            <p id="qv-desc">Detailed product description goes here...</p>
+
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+              <button class="btn__primary" id="qv-add-cart-btn" style="flex-grow: 1; justify-content: center;">
+                <i class="ri-shopping-cart-2-line"></i> Add to Cart
+              </button>
+              <button class="nav__action-btn" id="qv-wishlist-btn" title="Add to Wishlist">
+                <i class="ri-heart-line"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+         Interactive Checkout Modal
+         ========================================================================== -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content">
+      <div class="modal__header">
+        <h3><i class="ri-secure-payment-fill" style="color: var(--accent-teal);"></i> Secure Checkout</h3>
+        <span class="modal__close" id="close-checkout-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <form id="checkout-form">
+          <h4 style="margin-bottom: 0.8rem; color: var(--text-dark);">1. Shipping Address</h4>
+          <div class="form-grid" style="margin-bottom: 1.5rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <input type="text" id="chk-firstname" placeholder="First Name *" required />
+              <input type="text" id="chk-lastname" placeholder="Last Name *" required />
+            </div>
+            <input type="email" id="chk-email" placeholder="Email Address *" required />
+            <input type="text" id="chk-address" placeholder="Street Address *" required />
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <input type="text" id="chk-city" placeholder="City *" required />
+              <input type="text" id="chk-phone" placeholder="Phone *" required />
+            </div>
+          </div>
+
+          <h4 style="margin-bottom: 0.8rem; color: var(--text-dark);">2. Payment Method</h4>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-bottom: 1.5rem;">
+            <label
+              style="border: 1px solid var(--border-color); padding: 0.8rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; gap: 0.3rem; cursor: pointer; text-align: center; font-size: 0.85rem; font-weight: 600;">
+              <input type="radio" name="paymethod" value="card" checked />
+              <i class="ri-bank-card-line" style="font-size: 1.3rem; color: var(--primary-accent);"></i> Credit Card
+            </label>
+            <label
+              style="border: 1px solid var(--border-color); padding: 0.8rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; gap: 0.3rem; cursor: pointer; text-align: center; font-size: 0.85rem; font-weight: 600;">
+              <input type="radio" name="paymethod" value="paypal" />
+              <i class="ri-paypal-line" style="font-size: 1.3rem; color: #0070ba;"></i> PayPal
+            </label>
+            <label
+              style="border: 1px solid var(--border-color); padding: 0.8rem; border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; gap: 0.3rem; cursor: pointer; text-align: center; font-size: 0.85rem; font-weight: 600;">
+              <input type="radio" name="paymethod" value="cod" />
+              <i class="ri-hand-coin-line" style="font-size: 1.3rem; color: var(--accent-gold);"></i> Cash On Delivery
+            </label>
+          </div>
+
+          <div
+            style="padding: 1rem; border-radius: var(--radius-sm); background-color: var(--bg-secondary); margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
+            <span>Amount Due:</span>
+            <span id="checkout-total-display" style="font-size: 1.3rem; color: var(--primary-accent);">$0.00</span>
+          </div>
+
+          <button type="submit" class="btn-checkout" style="width: 100%;">
+            <i class="ri-lock-line"></i> Place Order Now
+          </button>
+        </form>
+
+        <!-- Checkout Success State -->
+        <div id="checkout-success" style="display: none; text-align: center; padding: 2rem 0;">
+          <div
+            style="width: 75px; height: 75px; border-radius: var(--radius-full); background-color: #d1fae5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 1.2rem auto;">
+            <i class="ri-checkbox-circle-fill"></i>
+          </div>
+          <h3 style="font-size: 1.6rem; color: var(--text-dark); margin-bottom: 0.5rem;">Order Placed Successfully!</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            Thank you for shopping at Pet Place! Your invoice has been emailed and we're preparing your package for
+            express delivery.
+          </p>
+          <div
+            style="display: inline-block; padding: 0.6rem 1.8rem; background-color: var(--bg-secondary); border: 2px dashed var(--accent-teal); border-radius: var(--radius-md); font-size: 1.25rem; font-weight: 800; color: var(--accent-teal); margin-bottom: 1.5rem;"
+            id="order-ref-code">
+            ORD-9824-77
+          </div>
+          <br />
+          <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn__primary" id="track-placed-order-btn">
+              <i class="ri-truck-line"></i> Track This Order Live
+            </button>
+            <button class="btn__outline" id="close-checkout-success-btn">
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+         Order Tracking Portal Modal
+         ========================================================================== -->
+  <div class="modal-overlay" id="order-tracker-modal">
+    <div class="modal-content" style="max-width: 680px;">
+      <div class="modal__header">
+        <div>
+          <h3 style="display: flex; align-items: center; gap: 0.5rem; margin: 0;">
+            <i class="ri-truck-line" style="color: var(--primary-accent);"></i>
+            Live Order Tracker
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">
+            Real-time dispatch, transit, and doorstep delivery updates
+          </p>
+        </div>
+        <span class="modal__close" id="close-order-tracker-modal">&times;</span>
+      </div>
+      <div class="modal__body" style="padding-top: 1.2rem;">
+        <!-- Order ID Search -->
+        <div class="order-tracker__search-box">
+          <input type="text" id="tracker-input-code" class="order-tracker__input"
+            placeholder="Enter Order Reference (e.g., ORD-9824-77)..." autocomplete="off" />
+          <button class="btn__primary" id="tracker-submit-btn" style="padding: 0.75rem 1.4rem;">
+            <i class="ri-search-2-line"></i> Track
+          </button>
+        </div>
+
+        <!-- Quick Test Chips -->
+        <div class="order-tracker__sample-chips">
+          <span>Quick Test IDs:</span>
+          <button type="button" class="order-tracker__sample-chip" data-code="ORD-9824-77">ORD-9824-77 (In
+            Transit)</button>
+          <button type="button" class="order-tracker__sample-chip" data-code="ORD-4412-89">ORD-4412-89 (Packed)</button>
+          <button type="button" class="order-tracker__sample-chip" data-code="ORD-1088-33">ORD-1088-33
+            (Delivered)</button>
+        </div>
+
+        <!-- Dynamic Result Container -->
+        <div id="tracker-result-area">
+          <!-- Populated dynamically by main.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Interactive TeleVet Video Consultation Room Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="televet-modal">
+    <div class="modal-content televet-modal-content">
+      <div class="modal__header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span class="live-pulse-dot"></span>
+          <div>
+            <h3 style="margin: 0; display: flex; align-items: center; gap: 0.4rem;">
+              <i class="ri-video-chat-fill" style="color: var(--primary-accent);"></i>
+              Live TeleVet Room: <span id="televet-doc-name">Dr. Maya Senanayake</span>
+            </h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Encrypted Veterinary Audio/Video Feed • Duration:
+              <span id="televet-call-timer">00:00</span></span>
+          </div>
+        </div>
+        <span class="modal__close" id="close-televet-modal">&times;</span>
+      </div>
+
+      <div class="televet-room__body">
+        <!-- Main Video Screen Area -->
+        <div class="televet-room__video-panel">
+          <div class="video-main-frame">
+            <img src="assets/about-1.jpg" alt="Veterinarian in Consultation" id="televet-vet-stream" />
+            <div class="audio-waveform-bar">
+              <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span
+                class="wave-bar"></span>
+              <small id="televet-speaking-indicator">Dr. Maya is speaking...</small>
+            </div>
+            <!-- PiP Client Camera -->
+            <div class="video-pip-frame" id="televet-user-pip">
+              <span class="pip-icon">🐕</span>
+              <span>Milo (Client Cam)</span>
+            </div>
+            <!-- Subtitles/Captions Bar -->
+            <div class="video-captions-overlay" id="televet-captions">
+              "Hello! I am reviewing Milo's medical file right now. How has his appetite and energy been today?"
+            </div>
+          </div>
+
+          <!-- Video Call Controls -->
+          <div class="televet-call-controls">
+            <button type="button" class="ctrl-btn" id="televet-btn-mic" title="Mute / Unmute Mic">
+              <i class="ri-mic-fill"></i>
+            </button>
+            <button type="button" class="ctrl-btn" id="televet-btn-cam" title="Toggle Camera">
+              <i class="ri-camera-fill"></i>
+            </button>
+            <button type="button" class="ctrl-btn active" id="televet-btn-chat" title="Toggle Chat">
+              <i class="ri-chat-1-fill"></i>
+            </button>
+            <button type="button" class="ctrl-btn" id="televet-btn-rx" title="Generate e-Prescription Slip">
+              <i class="ri-file-list-3-fill"></i>
+            </button>
+            <button type="button" class="ctrl-btn btn-end-call" id="televet-btn-end" title="End Consultation">
+              <i class="ri-phone-fill"></i> End Call
+            </button>
+          </div>
+        </div>
+
+        <!-- Consultation Chat & Clinical Notes Sidebar -->
+        <div class="televet-room__chat-panel" id="televet-chat-sidebar">
+          <div class="televet-chat__header">
+            <h4><i class="ri-chat-smile-2-line"></i> In-Call Doctor Chat</h4>
+            <span class="doc-online-tag">Connected</span>
+          </div>
+          <div class="televet-chat__stream" id="televet-chat-stream">
+            <div class="chat-bubble doc">
+              <strong>Dr. Maya Senanayake</strong>
+              <p>Welcome to Pet Place TeleVet! I see Milo's passport shows a chicken allergy. Please let me know what
+                symptoms you've noticed.</p>
+              <span class="chat-time">Just now</span>
+            </div>
+          </div>
+          <form class="televet-chat__input-bar" id="televet-chat-form">
+            <input type="text" id="televet-chat-input" placeholder="Type message to doctor..." autocomplete="off"
+              required />
+            <button type="submit"><i class="ri-send-plane-2-fill"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Generated Digital Prescription Drawer/Section (Hidden by default) -->
+      <div class="televet-rx-drawer" id="televet-rx-drawer" style="display: none;">
+        <div class="televet-rx-header">
+          <div>
+            <h4><i class="ri-file-text-fill"></i> Official Electronic Prescription (e-Rx)</h4>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Reference: RX-2026-9812 • Pet Place Veterinary
+              Hospital</span>
+          </div>
+          <button type="button" class="btn__primary" id="btn-print-rx"><i class="ri-printer-line"></i> Print / Save
+            Prescription</button>
+        </div>
+        <div class="televet-rx-content" id="televet-rx-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Edit Pet Profile Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="passport-edit-modal">
+    <div class="modal-content" style="max-width: 540px;">
+      <div class="modal__header">
+        <h3><i class="ri-profile-fill" style="color: var(--primary-accent);"></i> Edit Pet Health Profile</h3>
+        <span class="modal__close" id="close-passport-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <form id="passport-edit-form">
+          <div class="form-grid">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Pet Name *</label>
+              <input type="text" id="edit-pp-name" value="Milo Alexander" required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Species *</label>
+                <select id="edit-pp-species">
+                  <option value="Canine" selected>Dog / Canine 🐕</option>
+                  <option value="Feline">Cat / Feline 🐈</option>
+                  <option value="Avian">Bird 🦜</option>
+                  <option value="Rabbit">Rabbit 🐇</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Breed *</label>
+                <input type="text" id="edit-pp-breed" value="Golden Retriever" required />
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Age / DOB</label>
+                <input type="text" id="edit-pp-age" value="3 Years (March 2023)" />
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Weight (kg)</label>
+                <input type="number" id="edit-pp-weight" step="0.1" value="28.5" required />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Microchip Number (ISO)</label>
+              <input type="text" id="edit-pp-microchip" value="ISO 941-0000-2819-4821" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Allergies & Dietary Restrictions</label>
+              <input type="text" id="edit-pp-allergy" value="Chicken Protein, Pollen" />
+            </div>
+          </div>
+          <button type="submit" class="btn__primary" style="width: 100%; margin-top: 1.2rem; justify-content: center;">
+            <i class="ri-save-line"></i> Save Pet Profile Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Add Medication / Prevention Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="med-add-modal">
+    <div class="modal-content" style="max-width: 500px;">
+      <div class="modal__header">
+        <h3><i class="ri-capsule-fill" style="color: var(--primary-accent);"></i> Schedule Medication / Dose</h3>
+        <span class="modal__close" id="close-med-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <form id="med-add-form">
+          <div class="form-grid">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Medication / Supplement Name *</label>
+              <input type="text" id="med-input-name" placeholder="e.g. Apoquel, Heartgard, Omega-3 Oil" required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Category</label>
+                <select id="med-input-category">
+                  <option value="Allergy">Allergy Relief</option>
+                  <option value="Flea & Tick">Flea & Tick Prevention</option>
+                  <option value="Heartworm">Heartworm</option>
+                  <option value="Antibiotic">Antibiotic</option>
+                  <option value="Supplement">Supplements / Vitamins</option>
+                  <option value="Pain">Pain Management</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Dosage *</label>
+                <input type="text" id="med-input-dosage" placeholder="e.g. 1 Tablet, 5ml" required />
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Scheduled Time *</label>
+                <input type="time" id="med-input-time" value="08:00" required />
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Instructions</label>
+                <select id="med-input-withfood">
+                  <option value="With Meal">Give With Food</option>
+                  <option value="Empty Stomach">Empty Stomach</option>
+                  <option value="Anytime">Anytime</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn__primary" style="width: 100%; margin-top: 1.2rem; justify-content: center;">
+            <i class="ri-check-line"></i> Save Scheduled Dose
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Report Lost or Found Pet Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="lost-found-report-modal">
+    <div class="modal-content" style="max-width: 540px;">
+      <div class="modal__header">
+        <h3><i class="ri-alarm-warning-fill" style="color: #e11d48;"></i> Report Lost or Found Pet</h3>
+        <span class="modal__close" id="close-lf-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <form id="lf-report-form">
+          <div class="form-grid">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Report Type *</label>
+                <select id="lf-input-type">
+                  <option value="lost">🚨 I Lost My Pet</option>
+                  <option value="found">🐾 I Found a Stray Pet</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Pet Species *</label>
+                <select id="lf-input-species">
+                  <option value="Dog">Dog 🐕</option>
+                  <option value="Cat">Cat 🐈</option>
+                  <option value="Other">Other Pet</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Pet Name / Identification *</label>
+              <input type="text" id="lf-input-name" placeholder="e.g. Rusty (or 'Unknown White Cat')" required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Breed / Markings *</label>
+                <input type="text" id="lf-input-breed" placeholder="e.g. Beagle mix, black ears" required />
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Reward (Optional)</label>
+                <input type="text" id="lf-input-reward" placeholder="e.g. $200, None" />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Last Seen Location / Area *</label>
+              <input type="text" id="lf-input-location" placeholder="e.g. Near Colombo 07, Havelock Road" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Emergency Contact Phone Number *</label>
+              <input type="text" id="lf-input-phone" placeholder="e.g. +94 77 123 4567" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Additional Details & Distinct Features</label>
+              <textarea id="lf-input-desc" rows="3"
+                placeholder="Wearing collar, microchipped, friendly, timid..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn__primary" style="width: 100%; margin-top: 1.2rem; justify-content: center;">
+            <i class="ri-broadcast-fill"></i> Publish Community PawAlert
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       High-Contrast Missing Pet Flyer Modal (Instant Print)
+       ========================================================================== -->
+  <div class="modal-overlay" id="flyer-modal">
+    <div class="modal-content flyer-modal-content">
+      <div class="modal__header">
+        <h3><i class="ri-printer-fill" style="color: #e11d48;"></i> Printable Missing Pet Poster</h3>
+        <span class="modal__close" id="close-flyer-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <!-- Physical Poster Sheet Container -->
+        <div class="flyer-poster-sheet" id="flyer-sheet">
+          <div class="flyer-top-banner">
+            <h1>MISSING PET! REWARD</h1>
+            <h2 id="flyer-reward-banner">$250 REWARD FOR SAFE RETURN</h2>
+          </div>
+          <div class="flyer-photo-area">
+            <img src="assets/product-2.jpg" alt="Missing Pet" id="flyer-img" />
+          </div>
+          <div class="flyer-info-area">
+            <h2 id="flyer-name">RUSTY</h2>
+            <h3 id="flyer-breed">Beagle / Hound Mix • Tricolor</h3>
+            <p id="flyer-desc">Last seen around Colombo 07 near Viharamahadevi Park. Friendly, wearing a teal harness.
+              Microchipped.</p>
+            <div class="flyer-contact-box">
+              <span class="call-now-label">IF SEEN, PLEASE CALL IMMEDIATELY:</span>
+              <strong id="flyer-phone">+94 77 123 4567</strong>
+              <div class="flyer-sub-clinic">Pet Place 24/7 ER Trauma Line: +94 70 876 5432</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1.2rem;">
+          <button type="button" class="btn__primary" id="btn-trigger-print-flyer">
+            <i class="ri-printer-line"></i> Print Poster Now
+          </button>
+          <button type="button" class="btn__outline" id="btn-close-flyer-view">
+            Close Preview
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+         Floating Toast Notification Container
+         ========================================================================== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==========================================================================
+         PawBot — Interactive Live Chat Assistant Drawer
+         ========================================================================== -->
+  <div class="pawbot-drawer" id="pawbot-window">
+    <!-- Chat Header -->
+    <div class="pawbot-header">
+      <div class="pawbot-header__left">
+        <div class="pawbot-avatar">
+          <i class="ri-robot-2-line"></i>
+          <span class="pawbot-status-dot" title="Online 24/7"></span>
+        </div>
+        <div class="pawbot-info">
+          <h4>PawBot 🐾</h4>
+          <p><span class="online-indicator"></span> 24/7 AI Pet Assistant</p>
+        </div>
+      </div>
+      <div class="pawbot-header__actions">
+        <button type="button" class="pawbot-head-btn" id="pawbot-restart-btn" title="Restart conversation">
+          <i class="ri-refresh-line"></i>
+        </button>
+        <button type="button" class="pawbot-head-btn" id="pawbot-close-btn" title="Close chat">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Suggested Prompt Chips -->
+    <div class="pawbot-quick-chips">
+      <button type="button" class="pawbot-chip" data-msg="Emergency veterinary help">🚨 Emergency</button>
+      <button type="button" class="pawbot-chip" data-msg="Book an appointment">📅 Book Visit</button>
+      <button type="button" class="pawbot-chip" data-msg="Where is my order?">📦 Track Order</button>
+      <button type="button" class="pawbot-chip" data-msg="What are your discount codes?">🏷️ Promo Codes</button>
+      <button type="button" class="pawbot-chip" data-msg="Clinic hours and location">📍 Clinic Hours</button>
+    </div>
+
+    <!-- Messages Stream -->
+    <div class="pawbot-body" id="pawbot-messages">
+      <!-- Initial Welcome Message from PawBot -->
+      <div class="pawbot-msg bot-msg">
+        <div class="pawbot-bubble">
+          <p>Woof & Purr! 🐾 I'm <strong>PawBot</strong>, your Pet Place virtual care assistant. How can I help you and
+            your pet today? Ask me about our veterinary doctors, emergency triage, store products, or booking an
+            appointment!</p>
+        </div>
+        <span class="pawbot-time">Just now</span>
+      </div>
+    </div>
+
+    <!-- Input Bar -->
+    <form class="pawbot-input-area" id="pawbot-form">
+      <input type="text" id="pawbot-input" placeholder="Ask a question about pet care..." autocomplete="off" required />
+      <button type="submit" id="pawbot-send-btn" aria-label="Send message">
+        <i class="ri-send-plane-fill"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- ==========================================================================
+         Floating Action Buttons (Back to Top, Quick Call & PawBot)
+         ========================================================================== -->
+  <div class="floating-actions">
+    <!-- PawBot Chat Trigger FAB -->
+    <button class="fab-btn fab-pawbot" id="pawbot-trigger" title="Chat with PawBot 🐾" aria-label="Open PawBot Chat">
+      <i class="ri-chat-smile-2-fill"></i>
+      <span class="pawbot-beacon"></span>
+      <span class="pawbot-bubble-hint" id="pawbot-hint">Hi! Need help? 🐾</span>
+    </button>
+
+    <a href="tel:+94708765432" class="fab-btn" title="Call Emergency Vet" aria-label="Call Emergency Hotline"
+      style="background-color: var(--accent-rose); color: #ffffff;">
+      <i class="ri-phone-fill"></i>
+    </a>
+    <button class="fab-btn btn-back-to-top" id="back-to-top" title="Back to Top" aria-label="Back to top of page">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
