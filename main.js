@@ -2952,7 +2952,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================================================================
   // 20. Digital Pet Passport & Health Vault
   // =========================================================================
-  const PET_DATA = {
+  const DEFAULT_PET_DATA = {
     "pet-milo": {
       name: "Milo Alexander",
       species: "Canine",
@@ -2990,17 +2990,119 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const PASSPORT_STORAGE_KEY = "pet_place_passport";
+
+  function loadPetPassportData() {
+    try {
+      const savedData = localStorage.getItem(PASSPORT_STORAGE_KEY);
+
+      if (!savedData) {
+        return JSON.parse(JSON.stringify(DEFAULT_PET_DATA));
+      }
+
+      const savedPets = JSON.parse(savedData);
+
+      if (!savedPets || typeof savedPets !== "object" || Array.isArray(savedPets)) {
+        throw new Error("Invalid passport data format");
+      }
+
+      const pets = JSON.parse(JSON.stringify(DEFAULT_PET_DATA));
+
+      // Merge saved defaults and any newly registered pets
+      Object.keys(savedPets).forEach((petId) => {
+        const savedPet = savedPets[petId];
+
+        if (savedPet && typeof savedPet === "object" && !Array.isArray(savedPet)) {
+          pets[petId] = {
+            ...(pets[petId] || {}),
+            ...savedPet,
+            vaccines: Array.isArray(savedPet.vaccines)
+              ? savedPet.vaccines
+              : (pets[petId] ? pets[petId].vaccines : [])
+          };
+        }
+      });
+
+      return pets;
+    } catch (error) {
+      console.warn("Unable to load saved pet passport data:", error);
+      return JSON.parse(JSON.stringify(DEFAULT_PET_DATA));
+    }
+  }
+
+  function savePetPassportData() {
+    try {
+      localStorage.setItem(PASSPORT_STORAGE_KEY, JSON.stringify(PET_DATA));
+      return true;
+    } catch (error) {
+      console.error("Unable to save pet passport data:", error);
+      return false;
+    }
+  }
+
+  let PET_DATA = loadPetPassportData();
+
   let activePetId = "pet-milo";
-  const petSelectorChips = document.querySelectorAll(".pet-select-chip[data-pet-id]");
+  const petSelectorContainer = document.getElementById("passport-pet-selector");
   const ppTabBtns = document.querySelectorAll(".pp-tab-btn");
   const ppTabContents = document.querySelectorAll(".pp-tab-content");
   const editPassportBtn = document.getElementById("btn-edit-passport");
+  const editPassportBookletBtn = document.getElementById("btn-edit-passport-booklet");
   const passportEditModal = document.getElementById("passport-edit-modal");
   const closePassportModal = document.getElementById("close-passport-modal");
   const passportEditForm = document.getElementById("passport-edit-form");
+  const passportRegisterModal = document.getElementById("passport-register-modal");
+  const closeRegisterModalBtn = document.getElementById("close-register-modal");
+  const passportRegisterForm = document.getElementById("passport-register-form");
   const printPassportBtn = document.getElementById("btn-print-passport");
   const downloadCertBtn = document.getElementById("btn-download-cert");
   const addVaccineBtn = document.getElementById("btn-add-vaccine");
+
+  function renderPetSelectorChips() {
+    if (!petSelectorContainer) return;
+
+    let html = "";
+    Object.keys(PET_DATA).forEach((petId) => {
+      const pet = PET_DATA[petId];
+      const isActive = petId === activePetId;
+      html += `
+        <button type="button" class="pet-select-chip ${isActive ? 'active' : ''}" data-pet-id="${petId}">
+          <span class="chip-avatar">${pet.avatar || '🐾'}</span>
+          <div>
+            <strong>${escapeHtml(pet.name)}</strong>
+            <small>${escapeHtml(pet.breed || pet.species || '')}</small>
+          </div>
+        </button>
+      `;
+    });
+
+    html += `
+      <button type="button" class="pet-select-chip chip-add" id="btn-add-pet">
+        <i class="ri-add-line"></i>
+        <span>Register Pet</span>
+      </button>
+    `;
+
+    petSelectorContainer.innerHTML = html;
+
+    // Attach switch listener to all pet chips
+    petSelectorContainer.querySelectorAll(".pet-select-chip[data-pet-id]").forEach(chip => {
+      chip.addEventListener("click", () => {
+        const pid = chip.getAttribute("data-pet-id");
+        if (pid && PET_DATA[pid]) {
+          renderPetPassport(pid);
+          renderPetSelectorChips();
+          showToast("Pet Switched", `Viewing health passport for ${PET_DATA[pid].name}.`, "info");
+        }
+      });
+    });
+
+    // Attach click listener to Register Pet button
+    const addPetBtn = document.getElementById("btn-add-pet");
+    if (addPetBtn) {
+      addPetBtn.addEventListener("click", openRegisterModal);
+    }
+  }
 
   function renderPetPassport(petId) {
     const pet = PET_DATA[petId];
@@ -3024,7 +3126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (genderEl) genderEl.textContent = pet.gender;
     if (weightEl) weightEl.textContent = pet.weight;
     if (allergyEl) allergyEl.innerHTML = `<i class="ri-alarm-warning-line"></i> Allergy: ${pet.allergy}`;
-    if (avatarEl) avatarEl.textContent = pet.avatar;
+    if (avatarEl) avatarEl.textContent = pet.avatar || "🐾";
 
     if (tbody && pet.vaccines) {
       tbody.innerHTML = pet.vaccines.map(v => `
@@ -3038,15 +3140,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  petSelectorChips.forEach(chip => {
-    chip.addEventListener("click", () => {
-      petSelectorChips.forEach(c => c.classList.remove("active"));
-      chip.classList.add("active");
-      const pid = chip.getAttribute("data-pet-id");
-      renderPetPassport(pid);
-      showToast("Pet Switched", `Viewing health passport for ${PET_DATA[pid].name}.`, "info");
-    });
-  });
+  // Initial render of chips and passport
+  renderPetSelectorChips();
+  renderPetPassport(activePetId);
 
   ppTabBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -3059,48 +3155,179 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (editPassportBtn && passportEditModal) {
-    editPassportBtn.addEventListener("click", () => {
-      const pet = PET_DATA[activePetId];
-      if (pet) {
-        const nInput = document.getElementById("edit-pp-name");
-        const bInput = document.getElementById("edit-pp-breed");
-        const aInput = document.getElementById("edit-pp-age");
-        const wInput = document.getElementById("edit-pp-weight");
-        const cInput = document.getElementById("edit-pp-microchip");
-        const alInput = document.getElementById("edit-pp-allergy");
+  // Open Edit Profile Modal
+  function openEditModal() {
+    const pet = PET_DATA[activePetId];
+    if (pet && passportEditModal) {
+      const nInput = document.getElementById("edit-pp-name");
+      const sSelect = document.getElementById("edit-pp-species");
+      const bInput = document.getElementById("edit-pp-breed");
+      const aInput = document.getElementById("edit-pp-age");
+      const wInput = document.getElementById("edit-pp-weight");
+      const cInput = document.getElementById("edit-pp-microchip");
+      const alInput = document.getElementById("edit-pp-allergy");
 
-        if (nInput) nInput.value = pet.name;
-        if (bInput) bInput.value = pet.breed;
-        if (aInput) aInput.value = pet.age;
-        if (wInput) wInput.value = pet.weightKg;
-        if (cInput) cInput.value = pet.microchip;
-        if (alInput) alInput.value = pet.allergy;
-      }
+      if (nInput) nInput.value = pet.name || "";
+      if (sSelect) sSelect.value = pet.species || "Canine";
+      if (bInput) bInput.value = pet.breed || "";
+      if (aInput) aInput.value = pet.age || "";
+      if (wInput) wInput.value = pet.weightKg || "";
+      if (cInput) cInput.value = pet.microchip || "";
+      if (alInput) alInput.value = pet.allergy || "";
+
       passportEditModal.classList.add("open");
-    });
+    }
+  }
+
+  if (editPassportBtn) {
+    editPassportBtn.addEventListener("click", openEditModal);
+  }
+
+  if (editPassportBookletBtn) {
+    editPassportBookletBtn.addEventListener("click", openEditModal);
   }
 
   if (closePassportModal && passportEditModal) {
     closePassportModal.addEventListener("click", () => passportEditModal.classList.remove("open"));
   }
 
+  if (passportEditModal) {
+    passportEditModal.addEventListener("click", (e) => {
+      if (e.target === passportEditModal) passportEditModal.classList.remove("open");
+    });
+  }
+
+  // Handle Edit Form Submission
   if (passportEditForm) {
     passportEditForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const pet = PET_DATA[activePetId];
       if (pet) {
-        pet.name = document.getElementById("edit-pp-name").value;
-        pet.breed = document.getElementById("edit-pp-breed").value;
-        pet.age = document.getElementById("edit-pp-age").value;
+        pet.name = document.getElementById("edit-pp-name").value.trim();
+        const spec = document.getElementById("edit-pp-species").value;
+        pet.species = spec;
+        if (spec === "Canine") pet.avatar = "🐕";
+        else if (spec === "Feline") pet.avatar = "🐈";
+        else if (spec === "Avian" || spec === "Bird") pet.avatar = "🦜";
+        else if (spec === "Rabbit") pet.avatar = "🐇";
+        else pet.avatar = "🐾";
+
+        pet.breed = document.getElementById("edit-pp-breed").value.trim();
+        pet.age = document.getElementById("edit-pp-age").value.trim();
         pet.weightKg = parseFloat(document.getElementById("edit-pp-weight").value) || pet.weightKg;
         pet.weight = `${pet.weightKg} kg`;
-        pet.microchip = document.getElementById("edit-pp-microchip").value;
-        pet.allergy = document.getElementById("edit-pp-allergy").value;
+        pet.microchip = document.getElementById("edit-pp-microchip").value.trim();
+        pet.allergy = document.getElementById("edit-pp-allergy").value.trim();
+
+        savePetPassportData();
+        renderPetSelectorChips();
         renderPetPassport(activePetId);
       }
       if (passportEditModal) passportEditModal.classList.remove("open");
       showToast("Profile Updated 🎉", "Pet health passport details successfully saved.", "success");
+    });
+  }
+
+  // Open Register New Pet Modal
+  function openRegisterModal() {
+    if (passportRegisterModal) {
+      if (passportRegisterForm) passportRegisterForm.reset();
+      passportRegisterModal.classList.add("open");
+    }
+  }
+
+  function closeRegisterModal() {
+    if (passportRegisterModal) passportRegisterModal.classList.remove("open");
+  }
+
+  if (closeRegisterModalBtn) {
+    closeRegisterModalBtn.addEventListener("click", closeRegisterModal);
+  }
+
+  if (passportRegisterModal) {
+    passportRegisterModal.addEventListener("click", (e) => {
+      if (e.target === passportRegisterModal) closeRegisterModal();
+    });
+  }
+
+  // Handle Register New Pet Submission
+  if (passportRegisterForm) {
+    passportRegisterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("reg-pp-name").value.trim();
+      const species = document.getElementById("reg-pp-species").value;
+      const breed = document.getElementById("reg-pp-breed").value.trim() || species;
+      const age = document.getElementById("reg-pp-age").value.trim() || "1 Year";
+      const weightVal = parseFloat(document.getElementById("reg-pp-weight").value) || 10.0;
+      const gender = document.getElementById("reg-pp-gender").value;
+      const color = document.getElementById("reg-pp-color").value.trim() || "Standard";
+      let microchip = document.getElementById("reg-pp-microchip").value.trim();
+      if (!microchip) {
+        const randA = Math.floor(1000 + Math.random() * 9000);
+        const randB = Math.floor(1000 + Math.random() * 9000);
+        microchip = `ISO 941-0000-${randA}-${randB}`;
+      }
+      const allergy = document.getElementById("reg-pp-allergy").value.trim() || "None reported";
+
+      let avatar = "🐾";
+      let starterVaccines = [];
+
+      if (species === "Canine") {
+        avatar = "🐕";
+        starterVaccines = [
+          { name: "Rabies 3-Year", batch: "Batch #RB-2026-REG", given: "Today", due: "In 3 Years", status: "green", statusText: "Valid ✓" },
+          { name: "DHPP Core 5-in-1", batch: "Distemper & Parvo", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" },
+          { name: "Bordetella Oral", batch: "Kennel Cough Guard", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" }
+        ];
+      } else if (species === "Feline") {
+        avatar = "🐈";
+        starterVaccines = [
+          { name: "Feline FVRCP Core", batch: "Rhinotracheitis & Calici", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" },
+          { name: "Feline Rabies", batch: "Batch #FR-2026-REG", given: "Today", due: "In 3 Years", status: "green", statusText: "Valid ✓" },
+          { name: "Revolution Plus Drops", batch: "Flea & Parasite Guard", given: "Today", due: "In 30 Days", status: "green", statusText: "Valid ✓" }
+        ];
+      } else if (species === "Bird") {
+        avatar = "🦜";
+        starterVaccines = [
+          { name: "Avian Polyomavirus", batch: "Batch #AP-2026", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" },
+          { name: "General Wellness & Feather Check", batch: "Clinical Screen", given: "Today", due: "In 6 Months", status: "green", statusText: "Valid ✓" }
+        ];
+      } else if (species === "Rabbit") {
+        avatar = "🐇";
+        starterVaccines = [
+          { name: "Rabbit Haemorrhagic Disease (RHDV2)", batch: "Batch #RHD-2026", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" },
+          { name: "Myxomatosis Prevention", batch: "Bio-Guard", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" }
+        ];
+      } else {
+        avatar = "🐾";
+        starterVaccines = [
+          { name: "General Physical & Parasite Screen", batch: "Clinic Check", given: "Today", due: "In 1 Year", status: "green", statusText: "Valid ✓" }
+        ];
+      }
+
+      const newPetId = "pet-" + Date.now();
+      const newPet = {
+        name: name,
+        species: species,
+        breed: breed,
+        age: age,
+        weight: `${weightVal} kg • ${color}`,
+        weightKg: weightVal,
+        gender: gender,
+        microchip: microchip,
+        allergy: allergy,
+        avatar: avatar,
+        vaccines: starterVaccines
+      };
+
+      PET_DATA[newPetId] = newPet;
+      savePetPassportData();
+      activePetId = newPetId;
+      renderPetSelectorChips();
+      renderPetPassport(newPetId);
+      closeRegisterModal();
+
+      showToast("Pet Registered! 🎉", `Official Pet Health Passport issued for ${name}.`, "success");
     });
   }
 
@@ -3132,6 +3359,7 @@ document.addEventListener("DOMContentLoaded", () => {
             statusText: "Valid ✓"
           });
           renderPetPassport(activePetId);
+          savePetPassportData();
           showToast("Vaccine Logged 💉", `${vName} logged to official passport!`, "success");
         }
       }

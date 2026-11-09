@@ -1222,10 +1222,7 @@
         </div>
 
         <div class="passport__top-actions">
-          <button type="button" class="btn__outline" id="btn-edit-passport">
-            <i class="ri-edit-line"></i> Edit Profile
-          </button>
-          <button type="button" class="btn__primary" id="btn-print-passport">
+          <button type="button" class="btn__primary pp-print-btn" id="btn-print-passport">
             <i class="ri-printer-line"></i> Print Official Passport
           </button>
         </div>
@@ -1243,7 +1240,22 @@
               <span class="passport__country">OFFICIAL VETERINARY HEALTH PASSPORT</span>
               <h3 class="passport__title">Pet Place Health Vault ID</h3>
             </div>
-            <span class="passport__verified-badge"><i class="ri-checkbox-circle-fill"></i> VERIFIED ISO</span>
+            <div class="passport__header-actions">
+              <span class="passport__verified-badge">
+                <i class="ri-checkbox-circle-fill"></i> VERIFIED ISO
+              </span>
+
+              <button
+                type="button"
+                class="passport__booklet-edit-btn"
+                id="btn-edit-passport-booklet"
+                title="Edit Pet Health Profile"
+                aria-label="Edit Pet Health Profile"
+              >
+                <i class="ri-edit-2-line"></i>
+                <span>Edit</span>
+              </button>
+            </div>
           </div>
 
           <div class="passport__booklet-body">
@@ -2985,6 +2997,85 @@
           </div>
           <button type="submit" class="btn__primary" style="width: 100%; margin-top: 1.2rem; justify-content: center;">
             <i class="ri-save-line"></i> Save Pet Profile Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Register New Pet Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="passport-register-modal">
+    <div class="modal-content" style="max-width: 560px;">
+      <div class="modal__header">
+        <h3 style="display: flex; align-items: center; gap: 0.5rem; margin: 0;">
+          <i class="ri-heart-add-fill" style="color: var(--primary-accent);"></i> Register New Pet
+        </h3>
+        <span class="modal__close" id="close-register-modal">&times;</span>
+      </div>
+      <div class="modal__body">
+        <form id="passport-register-form">
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.2rem;">
+            Issue an official ISO Health Passport for your companion. Access vaccination booster tracking, electronic clearance certificates, and weight logs.
+          </p>
+          <div class="form-grid">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Pet Full Name *</label>
+              <input type="text" id="reg-pp-name" placeholder="e.g. Bella, Rocky, Oliver" required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Species *</label>
+                <select id="reg-pp-species" required>
+                  <option value="Canine" selected>Dog / Canine 🐕</option>
+                  <option value="Feline">Cat / Feline 🐈</option>
+                  <option value="Bird">Bird / Avian 🦜</option>
+                  <option value="Rabbit">Rabbit 🐇</option>
+                  <option value="Other">Other Pet 🐾</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Breed *</label>
+                <input type="text" id="reg-pp-breed" placeholder="e.g. French Bulldog, Labrador" required />
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Age / Date of Birth</label>
+                <input type="text" id="reg-pp-age" placeholder="e.g. 1 Year (Jan 2025)" />
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Weight (kg) *</label>
+                <input type="number" id="reg-pp-weight" step="0.1" placeholder="e.g. 12.5" required />
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Gender & Status</label>
+                <select id="reg-pp-gender">
+                  <option value="Male (Neutered)">Male (Neutered)</option>
+                  <option value="Female (Spayed)">Female (Spayed)</option>
+                  <option value="Male (Intact)">Male (Intact)</option>
+                  <option value="Female (Intact)">Female (Intact)</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 600;">Coat / Color</label>
+                <input type="text" id="reg-pp-color" placeholder="e.g. Golden, Tricolor, White" />
+              </div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Microchip Number (ISO)</label>
+              <input type="text" id="reg-pp-microchip" placeholder="Leave blank to auto-generate verified ISO code" />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 600;">Known Allergies or Medical Notes</label>
+              <input type="text" id="reg-pp-allergy" placeholder="e.g. None known, Wheat, Pollen" />
+            </div>
+          </div>
+          <button type="submit" class="btn__primary" style="width: 100%; margin-top: 1.25rem; justify-content: center;">
+            <i class="ri-shield-check-fill"></i> Register Pet & Issue Digital Passport
           </button>
         </form>
       </div>
